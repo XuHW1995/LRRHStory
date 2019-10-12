@@ -4,18 +4,11 @@ using UnityEngine;
 
 namespace XFramework
 {
-    public class RelaseResLoader : IResLoader
+    public class RelaseResLoader
     {
-        // Start is called before the first frame update
-        void Start()
+        public RelaseResLoader()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            DebugMgr.instance.Log("发布加载器创建完成");
         }
     }
 }

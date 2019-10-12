@@ -8,6 +8,10 @@ namespace XFramework
 {
     public interface IResLoader
     {
+        void Start();
+        void Update();
+        void Release();
 
+        void LoadAsset(string name, Type assetType, LoadAssetCallBack cb);
     }
 }

@@ -8,10 +8,15 @@ namespace XFramework
         private List<IGameMgr> m_mgrList = new List<IGameMgr>();
         public void BeginFramework()
         {
-            m_mgrList.Add(ResMgr.instance);
-
-            
+            registerAllMgr();
             initMgr();
+        }
+
+        private void registerAllMgr()
+        {
+            m_mgrList.Add(ResMgr.instance);
+            m_mgrList.Add(ConfigMgr.instance);   
+            m_mgrList.Add(DebugMgr.instance);   
         }
 
         private void initMgr()
@@ -40,7 +45,10 @@ namespace XFramework
 
         public void Destroy()
         {
-
+            foreach (var mgr in m_mgrList)
+            {
+                mgr.Destroy();
+            }
         }
     }
 }

@@ -14,11 +14,41 @@ public class GameLauncher : MonoBehaviour
     void Start()
     {
         XFrameworkLauncher.instance.Start();
+
+        //功能测试
+        Test();
     }
 
     // Update is called once per frame
     void Update()
     {
         XFrameworkLauncher.instance.Update();
+    }
+
+    void Test()
+    {
+        //Test 资源加载
+        ResMgr.instance.LoadAsset("Assets/GameRes/Prefabs/TestRes.prefab", typeof(GameObject), (success, asset) =>
+            {
+                DebugMgr.instance.Log("加载测试prefab成功？" + success);
+                GameObject a = Instantiate(asset) as GameObject;
+                a.transform.position = new Vector3(1, 2, 3);
+                DebugMgr.instance.Log("设置" + a.name + "位置:" + a.transform.position);
+            }
+        );
+
+        ResMgr.instance.LoadAsset("Assets/GameRes/Prefabs/TestRes.prefab", typeof(GameObject), (success, asset) =>
+        {
+            DebugMgr.instance.Log("第二次加载测试prefab成功？" + success);
+            GameObject a = Instantiate(asset) as GameObject;
+            a.transform.position = new Vector3(3, 3, 3);
+            DebugMgr.instance.Log("设置" + a.name + "位置:" + a.transform.position);
+        }
+        );
+
+        //Test log
+        //DebugMgr.instance.Log("1");
+        //DebugMgr.instance.LogWarning("2");
+        //DebugMgr.instance.LogError("3");
     }
 }
