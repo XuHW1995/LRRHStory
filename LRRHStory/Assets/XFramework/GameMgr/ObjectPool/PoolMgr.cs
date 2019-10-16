@@ -6,34 +6,43 @@ namespace XFramework
 {
     public class PoolMgr : GameMgr<PoolMgr>
     {
-        private Dictionary<string, IPool> m_poolDic;
-       
+        private Dictionary<string, AbstractObjectPool> m_poolDic;
+        #region 生命周期
         public override void Init()
         {
-            m_poolDic = new Dictionary<string, IPool>();
+            m_poolDic = new Dictionary<string, AbstractObjectPool>();
         }
 
-        //获取对象池
-        public IPool GetPool<T>(string name) where T : IPool, new()
+        public override void Destroy()
         {
-            if (m_poolDic.ContainsKey(name))
+            ReleaseAll();
+        }
+        #endregion
+
+        //获取对象池
+        public IPool<TObjofPool>GetPool<TObjofPool>(string name) where TObjofPool : BaseObjofPool,new()
+        {
+            AbstractObjectPool pool = null;
+            if (m_poolDic.TryGetValue(name, out pool))
             {
-                return m_poolDic[name];
+                Debug.Log("从缓存中获取对象池" + name);
+                return pool as ObjectPool<TObjofPool>;
             }
 
-            m_poolDic[name] = CreatNewPool<T>(name);
-            return m_poolDic[name];
+            Debug.Log("新建对象池" + name);
+            pool = CreatNewPool<TObjofPool>(name);
+            return pool as ObjectPool<TObjofPool>;
         }
 
         //创建对象池
-        private IPool CreatNewPool<T>(string name) where T : IPool, new()
+        private AbstractObjectPool CreatNewPool<TObjofPool>(string name) where TObjofPool : BaseObjofPool, new()
         {
-            IPool newPool = new T() as IPool;
-            m_poolDic[name] = newPool;
+            AbstractObjectPool newPool = new ObjectPool<TObjofPool>(name);
+            m_poolDic.Add(name, newPool);
             return newPool;
         }
 
-        //释放对象池
+        //释放某个对象池
         public void ReleasePool(string name)
         {
             if (!m_poolDic.ContainsKey(name))
@@ -42,15 +51,17 @@ namespace XFramework
             }
 
             m_poolDic[name].Release();
+            m_poolDic.Remove(name);
         }
 
-        //释放全部
+        //释放全部对象池
         public void ReleaseAll()
         {
-            foreach(KeyValuePair<string, IPool> onepool in m_poolDic)
+            foreach(KeyValuePair<string, AbstractObjectPool> onepool in m_poolDic)
             {
                 onepool.Value.Release();
-            }       
+            }
+            m_poolDic.Clear();
         }
     }
 }

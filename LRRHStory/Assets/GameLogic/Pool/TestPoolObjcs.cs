@@ -15,5 +15,11 @@ public class TestPoolObjcs:BaseObjofPool
     {
         m_entity = new GameObject();
     }
+
+    public override void Release()
+    {
+        base.Release();
+        GameObject.Destroy(entity);
+    }
 }
 

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace XFramework
 {
-    public interface IPool
+    public interface IPool<TPObj> where TPObj : BaseObjofPool, new()
     {
-        T GetObj<T>() where T : BaseObjofPool, new();
-        void RecycleObj(BaseObjofPool obj);
+        TPObj GetObj();
+        void RecycleObj(TPObj obj);
         void Release();
         void ReleaseFreeObj();
     }
