@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using XFramework;
 using UnityEngine;
 
-public class TestPoolObjcs:BaseObjofPool
+public class TestPoolObjcs:AbstractObjectOfPool
 {
-    GameObject m_entity;
-
+    private GameObject m_entity;
     public GameObject entity { get { return m_entity; } }
+
     public TestPoolObjcs()
     {
         m_entity = new GameObject();
     }
+    public override void Reset()
+    {
 
+    }
     public override void Release()
     {
         base.Release();

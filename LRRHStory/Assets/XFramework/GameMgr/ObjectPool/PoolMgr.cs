@@ -20,22 +20,20 @@ namespace XFramework
         #endregion
 
         //获取对象池
-        public IPool<TObjofPool>GetPool<TObjofPool>(string name) where TObjofPool : BaseObjofPool,new()
+        public IPool<TObjofPool>GetPool<TObjofPool>(string name) where TObjofPool : AbstractObjectOfPool, new()
         {
             AbstractObjectPool pool = null;
             if (m_poolDic.TryGetValue(name, out pool))
             {
-                Debug.Log("从缓存中获取对象池" + name);
                 return pool as ObjectPool<TObjofPool>;
             }
 
-            Debug.Log("新建对象池" + name);
             pool = CreatNewPool<TObjofPool>(name);
             return pool as ObjectPool<TObjofPool>;
         }
 
         //创建对象池
-        private AbstractObjectPool CreatNewPool<TObjofPool>(string name) where TObjofPool : BaseObjofPool, new()
+        private AbstractObjectPool CreatNewPool<TObjofPool>(string name) where TObjofPool : AbstractObjectOfPool, new()
         {
             AbstractObjectPool newPool = new ObjectPool<TObjofPool>(name);
             m_poolDic.Add(name, newPool);

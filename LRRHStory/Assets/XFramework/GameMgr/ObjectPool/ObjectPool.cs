@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace XFramework
 {
-    sealed class ObjectPool<TObjofPool> : AbstractObjectPool, IPool<TObjofPool> where TObjofPool : BaseObjofPool, new()
+    sealed class ObjectPool<TObjofPool> : AbstractObjectPool, IPool<TObjofPool> where TObjofPool : AbstractObjectOfPool, new()
     {
         private string m_name = string.Empty;
         private readonly int m_MaxCacheCount = 10;
@@ -25,11 +25,12 @@ namespace XFramework
             {
                 TObjofPool item = m_CacheObjList[0];
                 m_CacheObjList.Remove(m_CacheObjList[0]);
-                item.Free = false;
-                Debug.Log("从缓存中获取对象");
+                item.OnUse();
+                DebugMgr.instance.Log(string.Format("从对象池{0}的缓存中获取对象", m_name));
                 return item;
             }
-            Debug.Log("创建新对象");
+
+            DebugMgr.instance.Log(string.Format("在对象池{0}中创建对象", m_name));
             return new TObjofPool();
         }
 
@@ -37,9 +38,8 @@ namespace XFramework
         {
             if (m_CacheObjList.Count <= m_MaxCacheCount)
             {
-                Debug.Log("加入缓存列表");
                 m_CacheObjList.Add(obj);
-                obj.Free = true;
+                obj.Reset();
             }
         }
 
