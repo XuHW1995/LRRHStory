@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace XFramework
 {
-    public class UIDataTable
+    public enum UIID
+    {
+
+    }
+
+    public static class UIDataTable
     {
 
     }
