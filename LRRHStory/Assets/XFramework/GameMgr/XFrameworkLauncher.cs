@@ -18,6 +18,7 @@ namespace XFramework
             m_mgrList.Add(ResMgr.instance);    
             m_mgrList.Add(DebugMgr.instance);
             m_mgrList.Add(PoolMgr.instance);
+            m_mgrList.Add(UIMgr.instance);
         }
 
         private void initMgr()

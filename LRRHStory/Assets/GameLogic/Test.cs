@@ -9,6 +9,7 @@ public static class Test
         //TestDebugModule();
         TestPoolModule();
         //TestRefPass();
+        TestEventSystem();
     }
 
     private static void TestResModule()
@@ -99,6 +100,11 @@ public static class Test
             Debug.Log("名字是:" + m_Name + "分数是:" + m_Score);
             return base.ToString();
         }
+    }
+
+    private static void TestEventSystem()
+    {
+        BaseEventSystem.Send(1, "lalala");
     }
 }
 

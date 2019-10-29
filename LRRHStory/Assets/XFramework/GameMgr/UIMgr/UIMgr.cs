@@ -9,6 +9,7 @@ namespace XFramework
         public override void Init()
         {
             base.Init();
+            BaseEventSystem.Register(1, (a, b) => { Debug.Log("UIMgr 接受消息执行响应函数" + a + b[0].ToString()); });
         }
 
         public override void Start()
