@@ -1,186 +1,142 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-
-//namespace XFramework
-//{
-//    public delegate void EventHander(EventId eventenum, params object[] param);
-
-//    public static class EventSystem
-//    {
-//        private static Dictionary<EventId, EventCollection> m_AllListenerMap;
-
-//        /// <summary>
-//        /// 注册监听
-//        /// </summary>
-//        /// <param name="eventId"></param>
-//        /// <param name="eventHander"></param>
-//        public static void RegisterEvent(EventId eventId, EventHander eventHander)
-//        {
-//            EventCollection eventCollection;
-//            if (m_AllListenerMap.TryGetValue(eventId, out eventCollection))
-//            {
-//                eventCollection.Add(eventHander);
-//                return;
-//            }
-
-//            eventCollection = new EventCollection();
-//            eventCollection.Add(eventHander);
-//            m_AllListenerMap.Add(eventId, eventCollection);
-//        }
-
-//        /// <summary>
-//        /// 注销监听
-//        /// </summary>
-//        /// <param name="eventId"></param>
-//        public static void UnregisterEvent(EventId eventId)
-//        {
-//            EventCollection eventCollection;
-//            if (m_AllListenerMap.TryGetValue(eventId, out eventCollection))
-//            {
-//                eventCollection.Remove();
-//            }
-//        }
-
-//        /// <summary>
-//        /// 触发事件
-//        /// </summary>
-//        public static void SendEvent()
-//        {
-
-//        }
-
-//        private class EventCollection
-//        {
-//            List<EventHander> m_handerList;
-
-//            public void Add(EventHander hander)
-//            {
-
-//            }
-
-//            public void Remove()
-//            {
-
-//            }
-
-//            public void Fire()
-//            {
-
-//            }
-//        }
-//    }
-//}
-using System;
-using UnityEngine;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace XFramework
 {
-    public delegate void OnEvent(int key, params object[] param);
+    /// <summary>
+    /// 事件回调委托
+    /// </summary>
+    /// <param name="eventenum"></param>
+    /// <param name="param"></param>
+    public delegate void EventHandler(EventId eventenum, params object[] param);
 
-    // 弱引用事件
-    // http://blog.csdn.net/hulihui/article/details/3217649
-    public static class BaseEventSystem
+    public static class EventSystem
     {
-        static Dictionary<int, ListenerWrap> m_AllListenerMap = new Dictionary<int, ListenerWrap>(50);
+        private const int maxEventHandlersCount = 50;
+        private static Dictionary<EventId, EventHandlerCollection> m_AllListenerMap = new Dictionary<EventId, EventHandlerCollection>(maxEventHandlersCount);
 
-        public static bool Register<T>(T key, OnEvent fun) where T : IConvertible
+        /// <summary>
+        /// 注册监听
+        /// </summary>
+        /// <param name="eventId"></param>
+        /// <param name="eventHander"></param>
+        public static void RegisterEvent(EventId eventId, EventHandler handler)
         {
-            int kv = key.ToInt32(null);
-            ListenerWrap wrap;
-            if (!m_AllListenerMap.TryGetValue(kv, out wrap))
+            EventHandlerCollection handlers;
+            if (!m_AllListenerMap.TryGetValue(eventId, out handlers))
             {
-                wrap = new ListenerWrap();
-                m_AllListenerMap.Add(kv, wrap);
+                handlers = new EventHandlerCollection();
+                handlers.Add(handler);
+                m_AllListenerMap.Add(eventId, handlers);
+                return;
             }
 
-            if (wrap.Add(fun))
-            {
-                return true;
-            }
-
-            Debug.LogWarning("Already Register Same Event:" + key);
-            return false;
+            handlers.Add(handler);
         }
 
-        public static void UnRegister<T>(T key, OnEvent fun) where T : IConvertible
+        /// <summary>
+        /// 注销监听
+        /// </summary>
+        /// <param name="eventId"></param>
+        public static void UnregisterEvent(EventId eventId, EventHandler handler)
         {
-            ListenerWrap wrap;
-            if (m_AllListenerMap.TryGetValue(key.ToInt32(null), out wrap))
+            EventHandlerCollection handlers;          
+            if (m_AllListenerMap.TryGetValue(eventId, out handlers))
             {
-                wrap.Remove(fun);
+                handlers.Remove(handler);
             }
         }
 
-        public static bool Send<T>(T key, params object[] param) where T : IConvertible
+        /// <summary>
+        /// 触发事件
+        /// </summary>
+        public static void SendEvent(EventId eventId, params object[] param)
         {
-            int kv = key.ToInt32(null);
-            ListenerWrap wrap;
-            if (m_AllListenerMap.TryGetValue(kv, out wrap))
+            EventHandlerCollection handlers;
+            if (m_AllListenerMap.TryGetValue(eventId, out handlers))
             {
-                return wrap.Fire(kv, param);
+                handlers.Fire(eventId, param);
             }
-            return false;
         }
 
-        #region 内部结构
-        private class ListenerWrap
+        #region 事件回调集合类
+        private class EventHandlerCollection
         {
-            private LinkedList<OnEvent> m_EventList;
-            public bool Fire(int key, params object[] param)
+            LinkedList<EventHandler> m_handlerList;
+            
+            /// <summary>
+            /// 新增回调
+            /// </summary>
+            /// <param name="handler"></param>
+            public void Add(EventHandler handler)
             {
-                if (m_EventList == null)
+                if (m_handlerList == null)
                 {
-                    return false;
+                    m_handlerList = new LinkedList<EventHandler>();
                 }
 
-                LinkedListNode<OnEvent> next = m_EventList.First;
-                OnEvent call = null;
-                LinkedListNode<OnEvent> nextCache = null;
-
-                while (next != null)
-                {
-                    call = next.Value;
-                    nextCache = next.Next;
-                    call(key, param);
-
-                    //1.该事件的回调删除了自己OK 2.该事件的回调添加了新回调OK， 3.该事件删除了其它回调(被删除的回调可能有回调，可能没有)
-                    next = (next.Next == null) ? nextCache : next.Next;
-                }
-
-                return true;
-            }
-
-            public bool Add(OnEvent listener)
-            {
-                if (m_EventList == null)
-                {
-                    m_EventList = new LinkedList<OnEvent>();
-                }
-
-                if (m_EventList.Contains(listener))
-                {
-                    return false;
-                }
-
-                m_EventList.AddLast(listener);
-                return true;
-            }
-
-            public void Remove(OnEvent listener)
-            {
-                if (m_EventList == null)
+                if (m_handlerList.Contains(handler))
                 {
                     return;
                 }
 
-                m_EventList.Remove(listener);
+                m_handlerList.AddLast(handler);
+            }
+
+            /// <summary>
+            /// 移除回调
+            /// </summary>
+            /// <param name="handler"></param>
+            public void Remove(EventHandler handler)
+            {
+                if (m_handlerList == null)
+                {
+                    return;
+                }
+
+                m_handlerList.Remove(handler);
+            }
+
+            /// <summary>
+            /// 触发回调
+            /// </summary>
+            /// <param name="eventId"></param>
+            /// <param name="param"></param>
+            public void Fire(EventId eventId, params object[] param)
+            {
+                if (m_handlerList == null)
+                {
+                    return;
+                }
+
+                LinkedListNode<EventHandler> thisHandler = m_handlerList.First;
+                EventHandler callback = null;
+                LinkedListNode<EventHandler> nextCache = null;
+
+                while (thisHandler != null)
+                {
+                    callback = thisHandler.Value;
+                    nextCache = thisHandler.Next;
+                    callback(eventId, param);
+
+                    ////1.该事件的回调删除了自己OK 2.该事件的回调添加了新回调OK， 3.该事件删除了其它回调(被删除的回调可能有回调，可能没有)
+                    //next = next.Next == null ? nextCache : next.Next;
+
+                    if (thisHandler.Next == null)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        thisHandler = thisHandler.Next;
+                    }
+                }
             }
         }
         #endregion
     }
 }
+

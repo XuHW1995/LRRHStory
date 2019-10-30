@@ -8,6 +8,9 @@ namespace XFramework
 {
     public enum EventId
     {
-
+        TestEvent1,
+        TestEvent2,
+        TestEvent3,
+        maxEventCount
     }
 }

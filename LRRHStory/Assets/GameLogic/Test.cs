@@ -7,9 +7,9 @@ public static class Test
     {
         //TestResModule();
         //TestDebugModule();
-        TestPoolModule();
+        //TestPoolModule();
         //TestRefPass();
-        TestEventSystem();
+        //TestEventSystem();
     }
 
     private static void TestResModule()
@@ -104,7 +104,7 @@ public static class Test
 
     private static void TestEventSystem()
     {
-        BaseEventSystem.Send(1, "lalala");
+        EventSystem.SendEvent(EventId.TestEvent1, "TestEvent1事件的参数");
     }
 }
 
