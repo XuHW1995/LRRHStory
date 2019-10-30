@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
-namespace Assets.XFramework.GameMgr.UIMgr
+namespace XFramework
 {
-    class AbstractModule
+    public class UIPanel : MonoBehaviour
     {
+        public UIPanelInfo Info;
+
+        
     }
 }

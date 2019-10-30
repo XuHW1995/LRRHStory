@@ -6,9 +6,15 @@ namespace XFramework
 {
     public class UIMgr : GameMgr<UIMgr>
     {
+        #region 数据定义
+        private Dictionary<UIID, UIPanel> m_ShowingPanel;
+        private Dictionary<UIID, UIPanel> m_CachePanel;
+        #endregion
+
         public override void Init()
         {
-            base.Init();
+            m_ShowingPanel = new Dictionary<UIID, UIPanel>();
+            m_CachePanel = new Dictionary<UIID, UIPanel>();
         }
 
         public override void Start()
@@ -31,9 +37,15 @@ namespace XFramework
             base.Destroy();
         }
 
-        public void OpenUI()
+        public void OpenUI(UIID uiId, params object[] param)
         {
+            //根据id加载或者找到prefab
+            UIPanel thisPanel;
+            if (m_CachePanel.TryGetValue(uiId, out thisPanel))
+            {
 
+            }
+            //实例化prefab，并排序
         }
 
         public void CloseUI()
