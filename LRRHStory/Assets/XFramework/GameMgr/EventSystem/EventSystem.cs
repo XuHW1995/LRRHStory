@@ -15,58 +15,11 @@ namespace XFramework
 
     public static class EventSystem
     {
-        private const int maxEventHandlersCount = 50;
-        private static Dictionary<EventId, EventHandlerCollection> m_AllListenerMap = new Dictionary<EventId, EventHandlerCollection>(maxEventHandlersCount);
-
-        /// <summary>
-        /// 注册监听
-        /// </summary>
-        /// <param name="eventId"></param>
-        /// <param name="eventHander"></param>
-        public static void RegisterEvent(EventId eventId, EventHandler handler)
-        {
-            EventHandlerCollection handlers;
-            if (!m_AllListenerMap.TryGetValue(eventId, out handlers))
-            {
-                handlers = new EventHandlerCollection();
-                handlers.Add(handler);
-                m_AllListenerMap.Add(eventId, handlers);
-                return;
-            }
-
-            handlers.Add(handler);
-        }
-
-        /// <summary>
-        /// 注销监听
-        /// </summary>
-        /// <param name="eventId"></param>
-        public static void UnregisterEvent(EventId eventId, EventHandler handler)
-        {
-            EventHandlerCollection handlers;          
-            if (m_AllListenerMap.TryGetValue(eventId, out handlers))
-            {
-                handlers.Remove(handler);
-            }
-        }
-
-        /// <summary>
-        /// 触发事件
-        /// </summary>
-        public static void SendEvent(EventId eventId, params object[] param)
-        {
-            EventHandlerCollection handlers;
-            if (m_AllListenerMap.TryGetValue(eventId, out handlers))
-            {
-                handlers.Fire(eventId, param);
-            }
-        }
-
         #region 事件回调集合类
         private class EventHandlerCollection
         {
             LinkedList<EventHandler> m_handlerList;
-            
+
             /// <summary>
             /// 新增回调
             /// </summary>
@@ -137,6 +90,52 @@ namespace XFramework
             }
         }
         #endregion
+        private const int maxEventHandlersCount = 50;
+        private static Dictionary<EventId, EventHandlerCollection> m_AllListenerMap = new Dictionary<EventId, EventHandlerCollection>(maxEventHandlersCount);
+
+        /// <summary>
+        /// 注册监听
+        /// </summary>
+        /// <param name="eventId"></param>
+        /// <param name="eventHander"></param>
+        public static void RegisterEvent(EventId eventId, EventHandler handler)
+        {
+            EventHandlerCollection handlers;
+            if (!m_AllListenerMap.TryGetValue(eventId, out handlers))
+            {
+                handlers = new EventHandlerCollection();
+                handlers.Add(handler);
+                m_AllListenerMap.Add(eventId, handlers);
+                return;
+            }
+
+            handlers.Add(handler);
+        }
+
+        /// <summary>
+        /// 注销监听
+        /// </summary>
+        /// <param name="eventId"></param>
+        public static void UnregisterEvent(EventId eventId, EventHandler handler)
+        {
+            EventHandlerCollection handlers;          
+            if (m_AllListenerMap.TryGetValue(eventId, out handlers))
+            {
+                handlers.Remove(handler);
+            }
+        }
+
+        /// <summary>
+        /// 触发事件
+        /// </summary>
+        public static void SendEvent(EventId eventId, params object[] param)
+        {
+            EventHandlerCollection handlers;
+            if (m_AllListenerMap.TryGetValue(eventId, out handlers))
+            {
+                handlers.Fire(eventId, param);
+            }
+        }      
     }
 }
 
