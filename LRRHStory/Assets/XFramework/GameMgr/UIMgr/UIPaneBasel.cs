@@ -10,19 +10,19 @@ namespace XFramework
     public class UIPanelBase : MonoBehaviour
     {
         public UIPanelInfo Info;
-
-        public UIPanelBase(UIID uiId, GameObject prefab, int instanceId)
+  
+        public void LoadSuccess(Transform root, UIID uiId, GameObject prefab, int instanceId)
         {
             Info = new UIPanelInfo(uiId, prefab, instanceId);
-        }
-    
-
-        public void OpenUI(Transform root, params object[] param)
-        {
             Instantiate(Info.Prefab, root);
         }
 
-        public void CloseUI()
+        public virtual void OpenUI(params object[] param)
+        {
+            
+        }
+
+        public virtual void CloseUI()
         {
 
         }

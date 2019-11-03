@@ -2,20 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using XFramework;
 
-public class TestUIPanel : MonoBehaviour
+public class TestUIPanel : UIPanelBase
 {
     public Text ContentText;
+    public Text GetParam;
     // Start is called before the first frame update
-    void Start()
+    public override void OpenUI(params object[] param)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GetParam.text = (string)param[0];
     }
 
     public void OnBtnClickTest()

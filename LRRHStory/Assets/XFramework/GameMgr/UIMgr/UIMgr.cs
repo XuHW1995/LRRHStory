@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Reflection;
 
 namespace XFramework
 {
@@ -77,9 +78,10 @@ namespace XFramework
             ResMgr.instance.LoadAsset(uiStaticData.ResPath, typeof(GameObject), 
                 (isSuccess, obj)=> 
                 {
-                    UIPanelBase newUI = new UIPanelBase(uiId, (GameObject)obj,  ++instanceId);
+                    //TODO mono 不应该new
+                    UIPanelBase newUI = new UIPanelBase();
+                    newUI.LoadSuccess(UIRoot, uiId, (GameObject)obj, ++instanceId);
                     m_ShowingPanel.Add(uiId, newUI);
-                    newUI.OpenUI(UIRoot, param);
                 }
             );           
         }
