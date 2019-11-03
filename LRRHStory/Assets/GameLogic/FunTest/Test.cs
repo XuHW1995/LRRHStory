@@ -10,6 +10,7 @@ public static class Test
         //TestPoolModule();
         //TestRefPass();
         //TestEventSystem();
+        //TestaAAOrAAa();
     }
 
     private static void TestResModule()
@@ -105,6 +106,15 @@ public static class Test
     private static void TestEventSystem()
     {
         EventSystem.SendEvent(EventId.TestEvent1, "TestEvent1事件的参数");
+    }
+
+    private static void TestaAAOrAAa()
+    {
+        int a = 1;
+        Debug.Log("a++ 得" + a++);
+
+        int b = 1;
+        Debug.Log("++b 得" + ++b);
     }
 }
 

@@ -10,8 +10,14 @@ namespace XFramework
     public class UIPanelInfo
     {
         public UIID Id;
-        public GameObject Entity;
-        public UIPanel Father;
+        public GameObject Prefab;
         public int InstanceId;
+
+        public UIPanelInfo(UIID uiId, GameObject prefab, int instanceId)
+        {
+            Id = uiId;
+            Prefab = prefab;
+            InstanceId = instanceId;
+        }
     }
 }

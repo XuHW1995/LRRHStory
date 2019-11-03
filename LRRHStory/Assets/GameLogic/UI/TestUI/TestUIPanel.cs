@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UIActive : MonoBehaviour
+public class TestUIPanel : MonoBehaviour
 {
+    public Text ContentText;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,10 @@ public class UIActive : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OnBtnClickTest()
+    {
+        ContentText.text = TestUIModel.S.ContentText;
     }
 }

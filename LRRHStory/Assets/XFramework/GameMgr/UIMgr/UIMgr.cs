@@ -7,14 +7,20 @@ namespace XFramework
     public class UIMgr : GameMgr<UIMgr>
     {
         #region 数据定义
-        private Dictionary<UIID, UIPanel> m_ShowingPanel;
-        private Dictionary<UIID, UIPanel> m_CachePanel;
+        public Transform UIRoot;
+
+        private static int instanceId = 0;
+        private Dictionary<UIID, UIPanelBase> m_ShowingPanel;
+        private Dictionary<UIID, UIPanelBase> m_CachePanel;
         #endregion
 
         public override void Init()
         {
-            m_ShowingPanel = new Dictionary<UIID, UIPanel>();
-            m_CachePanel = new Dictionary<UIID, UIPanel>();
+            m_ShowingPanel = new Dictionary<UIID, UIPanelBase>();
+            m_CachePanel = new Dictionary<UIID, UIPanelBase>();
+
+            UIDataTable.InitUIDataTable();
+            UIRoot = GameObject.Find("UIRoot").transform;
         }
 
         public override void Start()
@@ -39,13 +45,15 @@ namespace XFramework
 
         public void OpenUI(UIID uiId, params object[] param)
         {
-            //根据id加载或者找到prefab
-            UIPanel thisPanel;
+            UIPanelBase thisPanel;
             if (m_CachePanel.TryGetValue(uiId, out thisPanel))
             {
-
+                thisPanel.OpenUI(UIRoot, param);
             }
-            //实例化prefab，并排序
+            else
+            {
+                AddUI(uiId, param);
+            }
         }
 
         public void CloseUI()
@@ -61,6 +69,19 @@ namespace XFramework
         public void FindUI()
         {
 
+        }
+
+        private void AddUI(UIID uiId, params object[] param)
+        {
+            UIData uiStaticData = UIDataTable.GetUIData(uiId);
+            ResMgr.instance.LoadAsset(uiStaticData.ResPath, typeof(GameObject), 
+                (isSuccess, obj)=> 
+                {
+                    UIPanelBase newUI = new UIPanelBase(uiId, (GameObject)obj,  ++instanceId);
+                    m_ShowingPanel.Add(uiId, newUI);
+                    newUI.OpenUI(UIRoot, param);
+                }
+            );           
         }
     }
 }
