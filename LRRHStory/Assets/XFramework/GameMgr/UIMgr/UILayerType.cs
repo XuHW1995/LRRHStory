@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.XFramework.GameMgr.UIMgr
+namespace XFramework
 {
-    class UILayerType
+    public enum UILayerType
     {
+        Top,
+        Full,
+        Pop,
     }
 }
