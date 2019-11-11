@@ -57,17 +57,12 @@ namespace XFramework
             }
         }
 
-        public void CloseUI()
+        public void CloseUI(UIID uiId)
         {
 
         }
 
-        public void HideUI()
-        {
-
-        }
-
-        public void FindUI()
+        public void FindUI(UIID uiId)
         {
 
         }
@@ -84,6 +79,11 @@ namespace XFramework
                     m_ShowingPanel.Add(uiId, newUI);
                 }
             );           
+        }
+
+        private void RemoveUI(UIID uiId)
+        {
+
         }
     }
 }
