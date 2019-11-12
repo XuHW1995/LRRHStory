@@ -21,7 +21,7 @@ namespace XFramework
             m_CachePanel = new Dictionary<UIID, UIPanelBase>();
 
             UIDataTable.InitUIDataTable();
-            UIRoot = GameObject.Find("UIRoot").transform;
+            UIRoot = GameObject.Find("GameLauncher/UIMgr/UIRoot").transform;
         }
 
         public override void Start()
