@@ -16,35 +16,35 @@ public static class Test
     private static void TestResModule()
     {
         //Test 资源加载
-        ResMgr.instance.LoadAsset("Assets/GameRes/Prefabs/TestRes.prefab", typeof(GameObject), (success, asset) =>
+        ResMgr.S.LoadAsset("Assets/GameRes/Prefabs/TestRes.prefab", typeof(GameObject), (success, asset) =>
         {
-            DebugMgr.instance.Log("加载测试prefab成功？" + success);
+            DebugMgr.S.Log("加载测试prefab成功？" + success);
             GameObject a = GameObject.Instantiate(asset) as GameObject;
             a.transform.position = new Vector3(1, 2, 3);
-            DebugMgr.instance.Log("设置" + a.name + "位置:" + a.transform.position);
+            DebugMgr.S.Log("设置" + a.name + "位置:" + a.transform.position);
         }
         );
 
-        ResMgr.instance.LoadAsset("Assets/GameRes/Prefabs/TestRes.prefab", typeof(GameObject), (success, asset) =>
+        ResMgr.S.LoadAsset("Assets/GameRes/Prefabs/TestRes.prefab", typeof(GameObject), (success, asset) =>
         {
-            DebugMgr.instance.Log("第二次加载测试prefab成功？" + success);
+            DebugMgr.S.Log("第二次加载测试prefab成功？" + success);
             GameObject a = GameObject.Instantiate(asset) as GameObject;
             a.transform.position = new Vector3(3, 3, 3);
-            DebugMgr.instance.Log("设置" + a.name + "位置:" + a.transform.position);
+            DebugMgr.S.Log("设置" + a.name + "位置:" + a.transform.position);
         }
         );
     }
     private static void TestDebugModule()
     {
         //Test log
-        DebugMgr.instance.Log("1");
-        DebugMgr.instance.LogWarning("2");
-        DebugMgr.instance.LogError("3");
+        DebugMgr.S.Log("1");
+        DebugMgr.S.LogWarning("2");
+        DebugMgr.S.LogError("3");
     }
     private static void TestPoolModule()
     {
         //Test pool
-        IPool<TestPoolObjcs> testpool = PoolMgr.instance.GetPool<TestPoolObjcs>("TestPool");
+        IPool<TestPoolObjcs> testpool = PoolMgr.S.GetPool<TestPoolObjcs>("TestPool");
 
         TestPoolObjcs testp1 = testpool.GetObj();
         testp1.entity.name = "1";
@@ -54,8 +54,8 @@ public static class Test
         testp3.entity.name = "3";
         testpool.RecycleObj(testp2);
         //testpool.ReleaseFreeObj();
-        //PoolMgr.instance.ReleasePool("TestPool");
-        PoolMgr.instance.GetPool<TestPoolObjcs>("TestPool").GetObj().entity.name = "new";
+        //PoolMgr.S.ReleasePool("TestPool");
+        PoolMgr.S.GetPool<TestPoolObjcs>("TestPool").GetObj().entity.name = "new";
     }
     private static void TestRefPass()
     {

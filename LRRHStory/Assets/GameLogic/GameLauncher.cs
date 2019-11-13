@@ -7,19 +7,19 @@ public class GameLauncher : MonoBehaviour
 {
     void Awake()
     {
-        XFrameworkLauncher.instance.BeginFramework();
+        XFrameworkLauncher.S.BeginFramework();
     }
 
     void Start()
     {
-        XFrameworkLauncher.instance.Start();
+        XFrameworkLauncher.S.Start();
         //功能测试
         //Test.ModuleTest();
-        UIMgr.instance.OpenUI(UIID.TestUI, "传入参数是啥玩意啊");
+        UIMgr.S.OpenUI(UIID.TestUI, "传入参数是啥玩意啊");
     }
 
     void Update()
     {
-        XFrameworkLauncher.instance.Update();
+        XFrameworkLauncher.S.Update();
     }
 }

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6040564530578213428}
   - component: {fileID: 8530395235465756778}
   - component: {fileID: 4292189292196575175}
-  - component: {fileID: 1390365386215285582}
+  - component: {fileID: 6083482028343638163}
   m_Layer: 5
-  m_Name: TestUIPanel
+  m_Name: TestUIPanel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1390365386215285582
+--- !u!114 &6083482028343638163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,11 +109,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 19172327266065884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea8292acc8650914e8e8b6c476269a82, type: 3}
+  m_Script: {fileID: 11500000, guid: cb8949b40600b69468f8fd15f28846a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ContentText: {fileID: 7004704569863001069}
-  GetParam: {fileID: 0}
 --- !u!1 &2131726695746832077
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11, y: 0}
+  m_AnchoredPosition: {x: -2, y: 0}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3055207708034019286
@@ -268,7 +267,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6D4B\u8BD5\u6309\u94AE1"
+  m_Text: "\u6D4B\u8BD5\u6309\u94AE2"
 --- !u!1 &3821698958914424459
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +346,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Model\u6570\u636E"
+  m_Text: "\u6253\u5F00\u9762\u677F\u53C2\u6570"
 --- !u!1 &5500962612562649592
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +425,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 111
+  m_Text: 0
 --- !u!1 &7357312781264765800
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,7 +621,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1390365386215285582}
+      - m_Target: {fileID: 6083482028343638163}
         m_MethodName: OnBtnClickTest
         m_Mode: 1
         m_Arguments:
