@@ -14,8 +14,8 @@ public class GameLauncher : MonoBehaviour
     {
         XFrameworkLauncher.instance.Start();
         //功能测试
-        Test.ModuleTest();
-        UIMgr.instance.OpenUI(UIID.TestUIPanel, "打开测试面板传入参数");
+        //Test.ModuleTest();
+        UIMgr.instance.OpenUI(UIID.TestUI, "传入参数是啥玩意啊");
     }
 
     void Update()

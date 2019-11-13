@@ -8,7 +8,7 @@ namespace XFramework
 {
     public enum UIID
     {
-        TestUIPanel,
+        TestUI,
     }
 
     public class UIData
@@ -31,7 +31,7 @@ namespace XFramework
 
         public static void InitUIDataTable()
         {
-            AddTable(UIID.TestUIPanel, "Assets/GameRes/Prefabs/UI/TestUIPanel.prefab", typeof(TestUIPanel));
+            AddTable(UIID.TestUI, "Assets/GameRes/Prefabs/UI/TestUIPanel.prefab", typeof(TestUIView));
         }
 
         public static UIData GetUIData(UIID uiId)

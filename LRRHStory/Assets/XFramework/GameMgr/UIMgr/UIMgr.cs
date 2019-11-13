@@ -49,7 +49,7 @@ namespace XFramework
             UIPanelBase thisPanel;
             if (m_CachePanel.TryGetValue(uiId, out thisPanel))
             {
-                thisPanel.OpenUI(UIRoot, param);
+                thisPanel.Open(UIRoot, param);
             }
             else
             {
@@ -73,10 +73,9 @@ namespace XFramework
             ResMgr.instance.LoadAsset(uiStaticData.ResPath, typeof(GameObject), 
                 (isSuccess, obj)=> 
                 {
-                    //TODO mono 不应该new
-                    UIPanelBase newUI = new UIPanelBase();
-                    newUI.LoadSuccess(UIRoot, uiId, (GameObject)obj, ++instanceId);
-                    m_ShowingPanel.Add(uiId, newUI);
+                    UIPanelBase newPanel = new UIPanelBase(UIRoot, uiId, (GameObject)obj, ++instanceId);                   
+                    m_ShowingPanel.Add(uiId, newPanel);
+                    newPanel.Open(param);
                 }
             );           
         }
