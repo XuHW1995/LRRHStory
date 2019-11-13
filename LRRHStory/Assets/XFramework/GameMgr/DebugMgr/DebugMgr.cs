@@ -6,7 +6,7 @@ namespace XFramework
     {
         public void Log(string msg)
         {
-            if (ConfigMgr.instance.GlobalConfig.LogLevel >= LogLevel.normal)
+            if (ConfigMgr.S.GlobalConfig.LogLevel >= LogLevel.normal)
             {
                 Debug.Log(msg);
             }
@@ -14,7 +14,7 @@ namespace XFramework
 
         public void LogWarning(string msg)
         {
-            if (ConfigMgr.instance.GlobalConfig.LogLevel >= LogLevel.warning)
+            if (ConfigMgr.S.GlobalConfig.LogLevel >= LogLevel.warning)
             {
                 Debug.LogWarning(msg);
             }
@@ -22,7 +22,7 @@ namespace XFramework
 
         public void LogError(string msg)
         {
-            if (ConfigMgr.instance.GlobalConfig.LogLevel >= LogLevel.error)
+            if (ConfigMgr.S.GlobalConfig.LogLevel >= LogLevel.error)
             {
                 Debug.LogError(msg);
             }

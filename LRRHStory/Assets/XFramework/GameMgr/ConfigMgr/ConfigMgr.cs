@@ -16,7 +16,7 @@ namespace XFramework
             m_globalConfig = AssetDatabase.LoadAssetAtPath<GlobalConfig>("Assets/XFramework/GameMgr/ConfigMgr/GlobalConfig.asset");
             if (m_globalConfig == null)
             {
-                DebugMgr.instance.LogError("GlobalConfig is invalid!");
+                DebugMgr.S.LogError("GlobalConfig is invalid!");
             }
         }
     }

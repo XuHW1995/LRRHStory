@@ -8,7 +8,7 @@ namespace XFramework
     {
         public RelaseResLoader()
         {
-            DebugMgr.instance.Log("发布加载器创建完成");
+            DebugMgr.S.Log("发布加载器创建完成");
         }
     }
 }

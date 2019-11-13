@@ -14,11 +14,11 @@ namespace XFramework
 
         private void registerAllMgr()
         {
-            m_mgrList.Add(ConfigMgr.instance);
-            m_mgrList.Add(ResMgr.instance);    
-            m_mgrList.Add(DebugMgr.instance);
-            m_mgrList.Add(PoolMgr.instance);
-            m_mgrList.Add(UIMgr.instance);
+            m_mgrList.Add(ConfigMgr.S);
+            m_mgrList.Add(ResMgr.S);    
+            m_mgrList.Add(DebugMgr.S);
+            m_mgrList.Add(PoolMgr.S);
+            m_mgrList.Add(UIMgr.S);
         }
 
         private void initMgr()

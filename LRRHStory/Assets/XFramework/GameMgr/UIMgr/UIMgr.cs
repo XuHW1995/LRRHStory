@@ -8,9 +8,7 @@ namespace XFramework
     public class UIMgr : GameMgr<UIMgr>
     {
         #region 数据定义
-        public Transform UIRoot;
-
-        private static int instanceId = 0;
+        public UIRoot UIRoot;
         private Dictionary<UIID, UIPanelBase> m_ShowingPanel;
         private Dictionary<UIID, UIPanelBase> m_CachePanel;
         #endregion
@@ -21,7 +19,7 @@ namespace XFramework
             m_CachePanel = new Dictionary<UIID, UIPanelBase>();
 
             UIDataTable.InitUIDataTable();
-            UIRoot = GameObject.Find("GameLauncher/UIMgr/UIRoot").transform;
+            UIRoot = Object.FindObjectOfType<UIRoot>();
         }
 
         public override void Start()
@@ -49,7 +47,7 @@ namespace XFramework
             UIPanelBase thisPanel;
             if (m_CachePanel.TryGetValue(uiId, out thisPanel))
             {
-                thisPanel.Open(UIRoot, param);
+                thisPanel.Open(param);
             }
             else
             {
@@ -70,10 +68,10 @@ namespace XFramework
         private void AddUI(UIID uiId, params object[] param)
         {
             UIData uiStaticData = UIDataTable.GetUIData(uiId);
-            ResMgr.instance.LoadAsset(uiStaticData.ResPath, typeof(GameObject), 
+            ResMgr.S.LoadAsset(uiStaticData.ResPath, typeof(GameObject), 
                 (isSuccess, obj)=> 
                 {
-                    UIPanelBase newPanel = new UIPanelBase(UIRoot, uiId, (GameObject)obj, ++instanceId);                   
+                    UIPanelBase newPanel = new UIPanelBase(UIRoot, uiId, (GameObject)obj);                   
                     m_ShowingPanel.Add(uiId, newPanel);
                     newPanel.Open(param);
                 }

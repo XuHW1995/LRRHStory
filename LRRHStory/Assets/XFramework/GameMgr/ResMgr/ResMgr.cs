@@ -12,7 +12,7 @@ namespace XFramework
         private IResLoader m_curResLoader = null;
         public override void Init()
         {
-            if (ConfigMgr.instance.GlobalConfig.EditorModel)
+            if (ConfigMgr.S.GlobalConfig.EditorModel)
             {
                 m_curResLoader = new EditorResLoader();         
             }
@@ -21,12 +21,12 @@ namespace XFramework
                 //m_curResLoader = new RelaseResLoader();
             }
 
-            DebugMgr.instance.Log("资源管理器初始化完成");
+            DebugMgr.S.Log("资源管理器初始化完成");
         }
 
         public override void Start()
         {
-            DebugMgr.instance.Log("资源管理器进入游戏");
+            DebugMgr.S.Log("资源管理器进入游戏");
         }
 
         public override void Update()

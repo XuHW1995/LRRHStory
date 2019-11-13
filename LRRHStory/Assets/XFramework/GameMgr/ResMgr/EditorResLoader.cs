@@ -19,7 +19,7 @@ namespace XFramework
         {
             m_LoadingRes = new List<ResInfo>();
             m_cacheRes = new Dictionary<string, Object>();
-            DebugMgr.instance.Log("编辑模式加载器创建完成");
+            DebugMgr.S.Log("编辑模式加载器创建完成");
         }
 
         #region 生命周期
@@ -52,7 +52,7 @@ namespace XFramework
                 }
                 else
                 {
-                    DebugMgr.instance.LogError("加载资源失败:" + m_curResInfo.name);
+                    DebugMgr.S.LogError("加载资源失败:" + m_curResInfo.name);
                 }
             }     
         }
