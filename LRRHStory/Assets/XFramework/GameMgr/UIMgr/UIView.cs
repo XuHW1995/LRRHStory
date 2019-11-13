@@ -9,8 +9,7 @@ namespace XFramework
 {
     public class UIView : MonoBehaviour
     {
-
-        public virtual void OpenUI(params object[] param) { }
-        public virtual void CloseUI() { }
+        public virtual void OpenUI(params object[] param){ }
+        public virtual void CloseUI(){ }
     }
 }

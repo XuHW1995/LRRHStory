@@ -116,5 +116,28 @@ public static class Test
         int b = 1;
         Debug.Log("++b 得" + ++b);
     }
+
+    abstract class b
+    {
+        //抽象方法父类不可实现
+        public abstract void bafun();
+
+        //虚方法父类可实现
+        public virtual void bvfun()
+        {
+            Debug.Log("bvfun");
+        }
+    }
+
+    class bson : b
+    {
+        //子类必须实现父类的抽象方法
+        public override void bafun()
+        {
+
+        }
+
+        //子类可以不实现父类的虚方法
+    }
 }
 

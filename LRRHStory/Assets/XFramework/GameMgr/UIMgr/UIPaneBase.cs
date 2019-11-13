@@ -61,7 +61,6 @@ namespace XFramework
                 m_PanelInfo.Obj.transform.SetParent(UIMgr.S.UIRoot.CacheRoot);
                 m_PanelInfo.Obj.SetActive(false);
             }
-
         }
     }
 }
