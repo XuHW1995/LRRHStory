@@ -47,7 +47,9 @@ namespace XFramework
             UIPanelBase thisPanel;
             if (m_CachePanel.TryGetValue(uiId, out thisPanel))
             {
-                thisPanel.Open(param);
+                m_CachePanel.Remove(uiId);
+                m_ShowingPanel.Add(uiId, thisPanel);
+                thisPanel.Open(param);               
             }
             else
             {
@@ -57,12 +59,24 @@ namespace XFramework
 
         public void CloseUI(UIID uiId)
         {
-
+            UIPanelBase thisPanel;
+            if (m_ShowingPanel.TryGetValue(uiId, out thisPanel))
+            {
+                thisPanel.Close();
+                m_ShowingPanel.Remove(uiId);
+                m_CachePanel.Add(uiId, thisPanel);
+            }
         }
 
-        public void FindUI(UIID uiId)
+        public UIView FindUI(UIID uiId)
         {
+            UIPanelBase thisPanel;
+            if (m_CachePanel.TryGetValue(uiId, out thisPanel))
+            {
+                return thisPanel.m_UIView;
+            }
 
+            return null;
         }
 
         private void AddUI(UIID uiId, params object[] param)
@@ -71,16 +85,14 @@ namespace XFramework
             ResMgr.S.LoadAsset(uiStaticData.ResPath, typeof(GameObject), 
                 (isSuccess, obj)=> 
                 {
-                    UIPanelBase newPanel = new UIPanelBase(UIRoot, uiId, (GameObject)obj);                   
-                    m_ShowingPanel.Add(uiId, newPanel);
-                    newPanel.Open(param);
+                    if (!m_ShowingPanel.ContainsKey(uiId))
+                    {
+                        UIPanelBase newPanel = new UIPanelBase(uiStaticData, (GameObject)obj);
+                        m_ShowingPanel.Add(uiId, newPanel);
+                        newPanel.Open(param);
+                    }                  
                 }
             );           
-        }
-
-        private void RemoveUI(UIID uiId)
-        {
-
         }
     }
 }

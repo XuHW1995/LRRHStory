@@ -17,4 +17,9 @@ public class TestUIView2 : UIView
     {
         ContentText.text = TestUIModel.S.ContentText;
     }
+
+    public void OnBtnClose()
+    {
+        UIMgr.S.CloseUI(UIID.TestUI2);
+    }
 }

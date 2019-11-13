@@ -9,6 +9,7 @@ namespace XFramework
 {
     public class UIRoot : MonoBehaviour
     {
-        public Transform mainRoot;
+        public Transform MainRoot;
+        public Transform CacheRoot;
     }
 }
