@@ -11,6 +11,7 @@ public static class Test
         //TestRefPass();
         //TestEventSystem();
         //TestaAAOrAAa();
+        //TestUIModule();
     }
 
     private static void TestResModule()
@@ -138,6 +139,11 @@ public static class Test
         }
 
         //子类可以不实现父类的虚方法
+    }
+
+    public static void TestUIModule()
+    {
+        UIMgr.S.OpenUI(UIID.TestUI, "传入参数是啥玩意啊");
     }
 }
 

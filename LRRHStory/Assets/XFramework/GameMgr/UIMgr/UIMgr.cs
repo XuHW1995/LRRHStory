@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Reflection;
+using DG;
+using DG.Tweening;
 
 namespace XFramework
 {
@@ -20,6 +22,8 @@ namespace XFramework
 
             UIDataTable.InitUIDataTable();
             UIRoot = Object.FindObjectOfType<UIRoot>();
+            //Dotween初始化
+            DOTween.Init(true, true, LogBehaviour.Verbose).SetCapacity(100, 100);
         }
 
         public override void Start()
@@ -49,7 +53,7 @@ namespace XFramework
             {
                 m_CachePanel.Remove(uiId);
                 m_ShowingPanel.Add(uiId, thisPanel);
-                thisPanel.Open(param);               
+                thisPanel.Open(param);
             }
             else
             {
@@ -82,17 +86,17 @@ namespace XFramework
         private void AddUI(UIID uiId, params object[] param)
         {
             UIData uiStaticData = UIDataTable.GetUIData(uiId);
-            ResMgr.S.LoadAsset(uiStaticData.ResPath, typeof(GameObject), 
-                (isSuccess, obj)=> 
+            ResMgr.S.LoadAsset(uiStaticData.ResPath, typeof(GameObject),
+                (isSuccess, obj) =>
                 {
                     if (!m_ShowingPanel.ContainsKey(uiId))
                     {
                         UIPanelBase newPanel = new UIPanelBase(uiStaticData, (GameObject)obj);
                         m_ShowingPanel.Add(uiId, newPanel);
                         newPanel.Open(param);
-                    }                  
+                    }
                 }
-            );           
+            );
         }
     }
 }

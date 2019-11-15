@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using XFramework;
 
 public class DotweenTestCode : MonoBehaviour
 {
@@ -18,23 +19,23 @@ public class DotweenTestCode : MonoBehaviour
         //NormalTest();
         //TweenerTest();
         //FromTest();
-        aniAtrrSet();
+        AniAttrSet();
     }
     #region Dotween fun test
     //对值进行查值
-    void NormalTest()
+    private void NormalTest()
     {
-        DOTween.To(() => Cube.localPosition, x => Cube.localPosition = x, new Vector3(10,10,10), 5);
+        DOTween.To(() => Cube.localPosition, x => Cube.localPosition = x, new Vector3(10, 10, 10), 5);
     }
     //一般动画方法
-    void TweenerTest()
+    private void TweenerTest()
     {
         m_Tweener = Mpanel.DOLocalMove(Vector3.zero, 1, true);
         m_Tweener.SetAutoKill(false);
         m_Tweener.Pause();
     }
     //from方法
-    void FromTest()
+    private void FromTest()
     {
         //X移動5
         Cube.transform.DOMoveX(5, 1);
@@ -44,14 +45,13 @@ public class DotweenTestCode : MonoBehaviour
         Cube.transform.DOMoveX(5, 1).From(true);
     }
     //
-    void aniAtrrSet()
+    private void AniAttrSet()
     {
         Tweener thisTW = Mpanel.DOLocalMoveX(0, 2);
         thisTW.SetEase(Ease.InOutBack);
         thisTW.SetLoops(2);
-        thisTW.OnComplete(()=>{ Debug.Log("动画播放完成"); });
+        thisTW.OnComplete(() => { Debug.Log("动画播放完成"); });
     }
-
     #endregion
     public void OnTestClick()
     {

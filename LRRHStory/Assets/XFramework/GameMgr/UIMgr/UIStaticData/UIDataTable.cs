@@ -9,7 +9,10 @@ namespace XFramework
     public enum UIID
     {
         TestUI,
-        TestUI2
+        TestUI2,
+        EnterUI,
+        LoadingUI,
+        MainUI,
     }
 
     public class UIData
@@ -34,6 +37,11 @@ namespace XFramework
         {
             AddTable(UIID.TestUI, "Assets/GameRes/Prefabs/UI/TestUIPanel.prefab", typeof(TestUIView));
             AddTable(UIID.TestUI2, "Assets/GameRes/Prefabs/UI/TestUIPanel2.prefab", typeof(TestUIView2));
+
+            AddTable(UIID.EnterUI, "Assets/GameRes/Prefabs/UI/EnterUI/EnterUI.prefab", typeof(EnterUIView));
+            AddTable(UIID.LoadingUI, "Assets/GameRes/Prefabs/UI/EnterUI/LoadingUI.prefab", typeof(LoadingUIView));
+
+            AddTable(UIID.MainUI, "Assets/GameRes/Prefabs/UI/MainUI/MainUI.prefab", typeof(MainUIView));
         }
 
         public static UIData GetUIData(UIID uiId)
