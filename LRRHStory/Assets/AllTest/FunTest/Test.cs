@@ -19,28 +19,28 @@ public static class Test
         //Test 资源加载
         ResMgr.S.LoadAsset("Assets/GameRes/Prefabs/TestRes.prefab", typeof(GameObject), (success, asset) =>
         {
-            DebugMgr.S.Log("加载测试prefab成功？" + success);
+            DebugMgr.Log("加载测试prefab成功？" + success);
             GameObject a = GameObject.Instantiate(asset) as GameObject;
             a.transform.position = new Vector3(1, 2, 3);
-            DebugMgr.S.Log("设置" + a.name + "位置:" + a.transform.position);
+            DebugMgr.Log("设置" + a.name + "位置:" + a.transform.position);
         }
         );
 
         ResMgr.S.LoadAsset("Assets/GameRes/Prefabs/TestRes.prefab", typeof(GameObject), (success, asset) =>
         {
-            DebugMgr.S.Log("第二次加载测试prefab成功？" + success);
+            DebugMgr.Log("第二次加载测试prefab成功？" + success);
             GameObject a = GameObject.Instantiate(asset) as GameObject;
             a.transform.position = new Vector3(3, 3, 3);
-            DebugMgr.S.Log("设置" + a.name + "位置:" + a.transform.position);
+            DebugMgr.Log("设置" + a.name + "位置:" + a.transform.position);
         }
         );
     }
     private static void TestDebugModule()
     {
         //Test log
-        DebugMgr.S.Log("1");
-        DebugMgr.S.LogWarning("2");
-        DebugMgr.S.LogError("3");
+        DebugMgr.Log("1");
+        DebugMgr.LogWarning("2");
+        DebugMgr.LogError("3");
     }
     private static void TestPoolModule()
     {

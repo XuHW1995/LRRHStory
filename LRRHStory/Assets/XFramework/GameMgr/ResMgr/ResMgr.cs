@@ -21,12 +21,12 @@ namespace XFramework
                 //m_curResLoader = new RelaseResLoader();
             }
 
-            DebugMgr.S.Log("资源管理器初始化完成");
+            DebugMgr.Log("资源管理器初始化完成");
         }
 
         public override void Start()
         {
-            DebugMgr.S.Log("资源管理器进入游戏");
+            DebugMgr.Log("资源管理器进入游戏");
         }
 
         public override void Update()

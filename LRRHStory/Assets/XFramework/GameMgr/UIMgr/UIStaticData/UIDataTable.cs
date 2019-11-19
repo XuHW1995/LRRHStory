@@ -52,7 +52,7 @@ namespace XFramework
                 return thisUIData;
             }
 
-            DebugMgr.S.LogError(uiId.ToString() + "Don't init!");
+            DebugMgr.LogError(uiId.ToString() + "Don't init!");
             return null;
         }
 

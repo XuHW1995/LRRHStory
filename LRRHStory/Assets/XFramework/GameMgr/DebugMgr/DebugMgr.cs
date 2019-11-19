@@ -2,9 +2,9 @@
 
 namespace XFramework
 {
-    public class DebugMgr : GameMgr<DebugMgr>
+    public static class DebugMgr
     {
-        public void Log(string msg)
+        public static void Log(string msg)
         {
             if (ConfigMgr.S.GlobalConfig.LogLevel >= LogLevel.normal)
             {
@@ -12,7 +12,7 @@ namespace XFramework
             }
         }
 
-        public void LogWarning(string msg)
+        public static void LogWarning(string msg)
         {
             if (ConfigMgr.S.GlobalConfig.LogLevel >= LogLevel.warning)
             {
@@ -20,7 +20,7 @@ namespace XFramework
             }
         }
 
-        public void LogError(string msg)
+        public static void LogError(string msg)
         {
             if (ConfigMgr.S.GlobalConfig.LogLevel >= LogLevel.error)
             {

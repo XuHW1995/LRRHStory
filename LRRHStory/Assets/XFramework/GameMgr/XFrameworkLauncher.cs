@@ -15,8 +15,7 @@ namespace XFramework
         private void registerAllMgr()
         {
             m_mgrList.Add(ConfigMgr.S);
-            m_mgrList.Add(ResMgr.S);    
-            m_mgrList.Add(DebugMgr.S);
+            m_mgrList.Add(ResMgr.S);
             m_mgrList.Add(PoolMgr.S);
             m_mgrList.Add(UIMgr.S);
             m_mgrList.Add(SceneMgr.S);

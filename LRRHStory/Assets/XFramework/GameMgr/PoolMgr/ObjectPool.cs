@@ -26,11 +26,11 @@ namespace XFramework
                 TObjofPool item = m_CacheObjList[0];
                 m_CacheObjList.Remove(m_CacheObjList[0]);
                 item.OnUse();
-                DebugMgr.S.Log(string.Format("从对象池{0}的缓存中获取对象", m_name));
+                DebugMgr.Log(string.Format("从对象池{0}的缓存中获取对象", m_name));
                 return item;
             }
 
-            DebugMgr.S.Log(string.Format("在对象池{0}中创建对象", m_name));
+            DebugMgr.Log(string.Format("在对象池{0}中创建对象", m_name));
             return new TObjofPool();
         }
 
