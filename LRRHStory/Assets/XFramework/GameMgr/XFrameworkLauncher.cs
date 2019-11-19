@@ -20,7 +20,7 @@ namespace XFramework
             m_mgrList.Add(PoolMgr.S);
             m_mgrList.Add(UIMgr.S);
             m_mgrList.Add(SceneMgr.S);
-        }
+        }   
 
         private void initMgr()
         {
