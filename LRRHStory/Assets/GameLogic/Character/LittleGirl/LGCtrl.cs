@@ -14,11 +14,19 @@ public class LGCtrl : MonoBehaviour
             return m_fsm;
         }
     }
+
+    private Animator m_Animator;
+    [HideInInspector]
+    public Animator LGAnimator
+    {
+        get { return m_Animator; }
+    }
     #endregion
 
     void Awake()
     {
-        m_fsm = new LGFsm(StateEnum.Idle);
+        m_fsm = new LGFsm(this, StateEnum.Idle);
+        m_Animator = GetComponent<Animator>();
         AddListener();
     }
 
@@ -55,15 +63,20 @@ public class LGCtrl : MonoBehaviour
 
     void HanderWDown(EventId eventenum, params object[] param)
     {
-        Debug.Log("W按下响应！");
-        m_fsm.ChangeState(StateEnum.Move);
+        //m_fsm.ChangeState(StateEnum.Move);
     }
 
     void HanderWUp(EventId eventenum, params object[] param)
     {
-        Debug.Log("W弹起响应！");
-        m_fsm.ChangeState(StateEnum.Idle);
+        //m_fsm.ChangeState(StateEnum.Idle);
+        m_fsm.ChangeState(StateEnum.Move);
     }
-
     #endregion
+
+    public void ResetParams()
+    {
+        LGAnimator.SetInteger("CurState", 0);
+        LGAnimator.SetBool("ToMove", false);
+        LGAnimator.SetBool("ToMove", false);
+    }
 }

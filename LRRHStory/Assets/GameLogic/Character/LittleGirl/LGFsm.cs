@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class LGFsm : AbstractFsm
 {
+    public LGCtrl m_LGCtrl;
     public StateEnum m_CurrStateEnum { get; private set; }
     public StateEnum m_LastStateEnum { get; private set; }
 
     private StateBase m_Curstate = null;
     private Dictionary<StateEnum, StateBase> m_StateDic;
 
-    public LGFsm(StateEnum curStateEnum)
+    public LGFsm(LGCtrl lgctrl, StateEnum curStateEnum)
     {
+        m_LGCtrl = lgctrl;
         m_StateDic = new Dictionary<StateEnum, StateBase>();
         m_StateDic[StateEnum.Idle] = new LGIdleState(this);
         m_StateDic[StateEnum.Move] = new LGMoveState(this);
