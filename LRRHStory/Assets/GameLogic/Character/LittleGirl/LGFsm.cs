@@ -17,9 +17,7 @@ public class LGFsm : AbstractFsm
         m_StateDic = new Dictionary<StateEnum, StateBase>();
         m_StateDic[StateEnum.Idle] = new LGIdleState(this);
         m_StateDic[StateEnum.Move] = new LGMoveState(this);
-        //m_StateDic[StateEnum.Attack] = new RunState(this);
-        //m_StateDic[StateEnum.Injured] = new DieState(this);
-        //m_StateDic[StateEnum.Jump] = new JumpState(this);
+        m_StateDic[StateEnum.Jump] = new LGJumpState(this);
 
         if (m_StateDic.ContainsKey(m_CurrStateEnum))
         {
@@ -58,5 +56,10 @@ public class LGFsm : AbstractFsm
     public override T GetState<T>(StateEnum stateEnum)
     {
         return m_StateDic[stateEnum] as T;
+    }
+
+    public StateEnum GetCurState()
+    {
+        return m_CurrStateEnum;
     }
 }

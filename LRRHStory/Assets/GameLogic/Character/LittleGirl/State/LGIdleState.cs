@@ -12,20 +12,19 @@ public class LGIdleState : StateBase
 
     public override void OnEnter()
     {
-        m_Fsm.m_LGCtrl.ResetParams();
-        m_Fsm.m_LGCtrl.LGAnimator.SetBool("ToIdle", true);
-        m_Fsm.m_LGCtrl.LGAnimator.SetInteger("CurState", 0);
-        Debug.Log("LGidle enter");
+        m_Fsm.m_LGCtrl.LGAnimator.SetBool(LGAnimatorParms.LG_Bool_ToIdel, true);
     }
 
     public override void OnDo()
     {
-        
+        if (m_Fsm.m_LGCtrl.LGAnimator.GetCurrentAnimatorStateInfo(0).IsName(LGAnimatorParms.LG_IdleStateName))
+        {
+            m_Fsm.m_LGCtrl.LGAnimator.SetInteger(LGAnimatorParms.LG_Int_CurState, (int)LGStateEnum.LGIdle);
+        }
     }
 
     public override void OnExit()
     {
-        m_Fsm.m_LGCtrl.LGAnimator.SetBool("ToIdle", false);
-        Debug.Log("LGidle exit");
+        m_Fsm.m_LGCtrl.LGAnimator.SetBool(LGAnimatorParms.LG_Bool_ToIdel, false);
     }
 }

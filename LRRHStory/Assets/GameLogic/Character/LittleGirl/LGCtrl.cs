@@ -6,12 +6,12 @@ using XFramework;
 public class LGCtrl : MonoBehaviour
 {
     #region 数据定义
-    private LGFsm m_fsm;
+    private LGFsm m_Fsm;
     public LGFsm MyFsm
     {
         get
         {
-            return m_fsm;
+            return m_Fsm;
         }
     }
 
@@ -25,26 +25,23 @@ public class LGCtrl : MonoBehaviour
 
     void Awake()
     {
-        m_fsm = new LGFsm(this, StateEnum.Idle);
+        m_Fsm = new LGFsm(this, StateEnum.Idle);
         m_Animator = GetComponent<Animator>();
         AddListener();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        m_fsm.OnUpdate();
+        m_Fsm.OnUpdate();
     }
 
     void Destroy()
     {
-        Debug.Log("移除事件监听");
         RemoveListener();
     }
 
@@ -53,30 +50,54 @@ public class LGCtrl : MonoBehaviour
     {
         EventSystem.RegisterEvent(EventId.KEY_W_DOWN, HanderWDown);
         EventSystem.RegisterEvent(EventId.KEY_W_UP, HanderWUp);
+        EventSystem.RegisterEvent(EventId.KEY_SPACE_DOWN, HanderSpaceDown);
     }
 
     void RemoveListener()
     {
         EventSystem.UnregisterEvent(EventId.KEY_W_DOWN, HanderWDown);
         EventSystem.UnregisterEvent(EventId.KEY_W_UP, HanderWUp);
+        EventSystem.UnregisterEvent(EventId.KEY_SPACE_DOWN, HanderSpaceDown);
     }
 
     void HanderWDown(EventId eventenum, params object[] param)
     {
-        //m_fsm.ChangeState(StateEnum.Move);
+        m_Fsm.ChangeState(StateEnum.Move);
     }
-
+       
     void HanderWUp(EventId eventenum, params object[] param)
     {
-        //m_fsm.ChangeState(StateEnum.Idle);
-        m_fsm.ChangeState(StateEnum.Move);
+        if (m_Fsm.GetCurState() == StateEnum.Move)
+        {
+            m_Fsm.ChangeState(StateEnum.Idle);
+        }           
     }
+
+    void HanderSpaceDown(EventId eventenum, params object[] param)
+    {
+        m_Fsm.ChangeState(StateEnum.Jump);
+    }
+
+
     #endregion
 
-    public void ResetParams()
+    #region 动画事件
+    //起跳
+    void LGJumpLeaveFloor()
     {
-        LGAnimator.SetInteger("CurState", 0);
-        LGAnimator.SetBool("ToMove", false);
-        LGAnimator.SetBool("ToMove", false);
+
     }
+
+    //落地
+    void LGJumpFallFloor()
+    {
+
+    }
+
+    //跳动画结束
+    void LGJumpEnd()
+    {
+        m_Fsm.GoBackLastState();
+    }
+    #endregion
 }
