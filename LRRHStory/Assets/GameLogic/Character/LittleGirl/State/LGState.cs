@@ -1,57 +1,79 @@
-﻿public enum LGStateEnum
+﻿using UnityEngine;
+
+public enum LGStateEnum
 {
     LGIdle = 0,
     LGMove = 1,
     LGJump = 2,
+    LGAttack1 = 3,
+    LGAttack2 = 4,
+    LGAttack3 = 5,
 }
 
+/// <summary>
+/// 小红帽动画层级
+/// </summary>
 public enum LGAnimatorLayer
 {
     BaseLayer = 0,
 }
 
-public static class LGAnimatorParms
-{    
-    //状态名
-    public const string LG_MoveStateName = "MoveState";
-    public const string LG_IdleStateName = "IdleState";
-    public const string LG_JumpStateName = "JumpState";
-    //参数名
-    public const string LG_Int_CurState = "CurState";
-    public const string LG_Bool_ToMove = "ToMove";
-    public const string LG_Bool_ToIdel = "ToIdle";
-    public const string LG_Bool_ToJump = "ToJump";  
-    public const string LG_Float_MoveBlend = "MoveBlend";
+/// <summary>
+/// 小红帽动画状态名
+/// </summary>
+public enum LGAnimatorStateNameEnum
+{
+    IdleState,
+    MoveState,
+    JumpState,
+    AttackState1,
+    AttackState2,
+    AttackState3,
+}
+
+/// <summary>
+/// 小红帽动画状态机参数
+/// </summary>
+public enum LGAnimatorConditionEnum
+{
+    CurState,
+    ToMove,
+    ToIdle,
+    ToJump,
+    MoveBlend,
+    ToAttack, //普通攻击1
+    ComboIndex,
 }
 
 public abstract class LGState : StateBase
 {
-    public LGFsm m_Fsm;
+    public LGFsm CurLGFsm;
+    public AnimatorStateInfo CurAnimatorStateInfo;
 
-    public LGState(AbstractFsm fsm) : base(fsm)
+    public LGState(AbstractFsm fsm)
     {
-        m_Fsm = (LGFsm)fsm;
+        CurLGFsm = (LGFsm)fsm;
     }
 
     public override void OnEnter()
     {
-        Reset();
     }
 
     public override void OnDo()
     {
+        CurAnimatorStateInfo = CurLGFsm.CurLGCtrl.LGAnimator.GetCurrentAnimatorStateInfo(0);
+        //TODO 此处回待机状态的逻辑写的感觉不太好，但是没有想到一个好的解决方式
+        if (!Input.GetKey(KeyCode.W) 
+            && CurLGFsm.GetCurState() != StateEnum.Jump
+            && CurLGFsm.GetCurState() != StateEnum.Attack)
+        {
+            CurLGFsm.ChangeState(StateEnum.Idle);
+        }
     }
 
     public override void OnExit()
     {
       
-    }
-
-    private void Reset()
-    {
-        m_Fsm.m_LGCtrl.LGAnimator.SetBool(LGAnimatorParms.LG_Bool_ToIdel, false);
-        m_Fsm.m_LGCtrl.LGAnimator.SetBool(LGAnimatorParms.LG_Bool_ToMove, false);
-        m_Fsm.m_LGCtrl.LGAnimator.SetBool(LGAnimatorParms.LG_Bool_ToJump, false);
     }
 }
 

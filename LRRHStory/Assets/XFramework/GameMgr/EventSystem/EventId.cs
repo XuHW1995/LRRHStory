@@ -29,5 +29,9 @@ namespace XFramework
         KEY_SPACE,
         KEY_SPACE_DOWN,
         KEY_SPACE_UP,
+        KEY_X,
+        KEY_X_DOWN,
+        KEY_X_UP,
+
     }
 }

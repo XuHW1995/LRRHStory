@@ -51,6 +51,7 @@ public class LGCtrl : MonoBehaviour
         EventSystem.RegisterEvent(EventId.KEY_W_DOWN, HanderWDown);
         EventSystem.RegisterEvent(EventId.KEY_W_UP, HanderWUp);
         EventSystem.RegisterEvent(EventId.KEY_SPACE_DOWN, HanderSpaceDown);
+        EventSystem.RegisterEvent(EventId.KEY_X_UP, HanderXUp);
     }
 
     void RemoveListener()
@@ -58,6 +59,7 @@ public class LGCtrl : MonoBehaviour
         EventSystem.UnregisterEvent(EventId.KEY_W_DOWN, HanderWDown);
         EventSystem.UnregisterEvent(EventId.KEY_W_UP, HanderWUp);
         EventSystem.UnregisterEvent(EventId.KEY_SPACE_DOWN, HanderSpaceDown);
+        EventSystem.UnregisterEvent(EventId.KEY_X_UP, HanderXUp);
     }
 
     void HanderWDown(EventId eventenum, params object[] param)
@@ -78,6 +80,10 @@ public class LGCtrl : MonoBehaviour
         m_Fsm.ChangeState(StateEnum.Jump);
     }
 
+    void HanderXUp(EventId eventenum, params object[] param)
+    {
+        m_Fsm.ChangeState(StateEnum.Attack);
+    }
 
     #endregion
 
@@ -85,19 +91,20 @@ public class LGCtrl : MonoBehaviour
     //起跳
     void LGJumpLeaveFloor()
     {
-
+        //Debug.Log("起跳");
     }
 
     //落地
     void LGJumpFallFloor()
     {
-
+        //Debug.Log("落地");
     }
 
     //跳动画结束
     void LGJumpEnd()
     {
-        m_Fsm.GoBackLastState();
+        //Debug.Log("跳动画结束");
+        m_Fsm.GoBackLastState();        
     }
     #endregion
 }

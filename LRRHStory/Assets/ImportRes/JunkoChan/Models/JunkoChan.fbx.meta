@@ -440,7 +440,7 @@ ModelImporter:
     second: Sword_Ready
   - first:
       74: 7400012
-    second: Sword_Iai
+    second: Sword_Slash3
   - first:
       74: 7400014
     second: Sword_Slash
@@ -461,7 +461,7 @@ ModelImporter:
     second: ChainSaw_Idle
   - first:
       74: 7400026
-    second: ChainSaw_Slash
+    second: ChainSaw_Slash1
   - first:
       74: 7400028
     second: ChainSaw_Slash2
@@ -736,7 +736,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Sword_Iai
+      name: Sword_Slash3
       takeName: Sword_Iai
       internalID: 7400012
       firstFrame: 0
@@ -939,7 +939,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: ChainSaw_Slash
+      name: ChainSaw_Slash1
       takeName: ChainSaw_Slash
       internalID: 7400026
       firstFrame: 0

@@ -91,5 +91,20 @@ public class InputCenter : MonoBehaviour
         {
             EventSystem.SendEvent(EventId.KEY_SPACE);
         }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            EventSystem.SendEvent(EventId.KEY_X_DOWN);
+        }
+
+        if (Input.GetKeyUp(KeyCode.X))
+        {
+            EventSystem.SendEvent(EventId.KEY_X_UP);
+        }
+
+        if (Input.GetKey(KeyCode.X))
+        {
+            EventSystem.SendEvent(EventId.KEY_X);
+        }
     }
 }

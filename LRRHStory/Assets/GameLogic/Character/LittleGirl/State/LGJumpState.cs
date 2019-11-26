@@ -4,26 +4,26 @@ using UnityEngine;
 
 public class LGJumpState : LGState
 {
-    public LGJumpState(AbstractFsm fsm) : base(fsm)
-    {
-
-    }
+    public LGJumpState(AbstractFsm fsm) : base(fsm) { }
 
     public override void OnEnter()
     {
-        m_Fsm.m_LGCtrl.LGAnimator.SetBool(LGAnimatorParms.LG_Bool_ToJump, true);
+        Debug.Log("进入跳状态");
+        CurLGFsm.CurLGCtrl.LGAnimator.SetBool(LGAnimatorConditionEnum.ToJump.ToString(), true);
     }
 
     public override void OnDo()
     {
-        if (m_Fsm.m_LGCtrl.LGAnimator.GetCurrentAnimatorStateInfo(0).IsName(LGAnimatorParms.LG_JumpStateName))
+        base.OnDo();
+        if (CurAnimatorStateInfo.IsName(LGAnimatorStateNameEnum.JumpState.ToString()))
         {
-            m_Fsm.m_LGCtrl.LGAnimator.SetInteger(LGAnimatorParms.LG_Int_CurState, (int)LGStateEnum.LGJump);
+            CurLGFsm.CurLGCtrl.LGAnimator.SetInteger(LGAnimatorConditionEnum.CurState.ToString(), (int)LGStateEnum.LGJump);
         }
     }
 
     public override void OnExit()
     {
-        m_Fsm.m_LGCtrl.LGAnimator.SetBool(LGAnimatorParms.LG_Bool_ToJump, false);
+        Debug.Log("退出跳状态");
+        CurLGFsm.CurLGCtrl.LGAnimator.SetBool(LGAnimatorConditionEnum.ToJump.ToString(), false);
     }
 }

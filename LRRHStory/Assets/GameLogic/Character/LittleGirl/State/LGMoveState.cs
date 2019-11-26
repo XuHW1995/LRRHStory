@@ -16,26 +16,24 @@ public class LGMoveState : LGState
 
     public override void OnEnter()
     {
-        m_Fsm.m_LGCtrl.LGAnimator.SetBool(LGAnimatorParms.LG_Bool_ToMove, true);
-        DOTween.To(() => m_Walk2RunBlend, (m_Walk2RunBlend) => m_Fsm.m_LGCtrl.LGAnimator.SetFloat(LGAnimatorParms.LG_Float_MoveBlend, m_Walk2RunBlend), 1, m_Walk2RunTime);        
+        Debug.Log("进入移动状态");
+        CurLGFsm.CurLGCtrl.LGAnimator.SetBool(LGAnimatorConditionEnum.ToMove.ToString(), true);
+        DOTween.To(() => m_Walk2RunBlend, (m_Walk2RunBlend) => CurLGFsm.CurLGCtrl.LGAnimator.SetFloat(LGAnimatorConditionEnum.MoveBlend.ToString(), m_Walk2RunBlend), 1, m_Walk2RunTime);        
     }
 
     public override void OnDo()
     {
-        if (m_Fsm.m_LGCtrl.LGAnimator.GetCurrentAnimatorStateInfo(0).IsName(LGAnimatorParms.LG_MoveStateName))
+        base.OnDo();
+        if (CurAnimatorStateInfo.IsName(LGAnimatorStateNameEnum.MoveState.ToString()))
         {
-            m_Fsm.m_LGCtrl.LGAnimator.SetInteger(LGAnimatorParms.LG_Int_CurState, (int)LGStateEnum.LGMove);
-        }
-
-        if (!Input.GetKey(KeyCode.W))
-        {
-            m_Fsm.ChangeState(StateEnum.Idle);
+            CurLGFsm.CurLGCtrl.LGAnimator.SetInteger(LGAnimatorConditionEnum.CurState.ToString(), (int)LGStateEnum.LGMove);
         }
     }
 
     public override void OnExit()
     {
-        m_Fsm.m_LGCtrl.LGAnimator.SetBool(LGAnimatorParms.LG_Bool_ToMove, false);
+        Debug.Log("退出移动状态");
+        CurLGFsm.CurLGCtrl.LGAnimator.SetBool(LGAnimatorConditionEnum.ToMove.ToString(), false);
     }
 
 

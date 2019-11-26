@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class LGFsm : AbstractFsm
 {
-    public LGCtrl m_LGCtrl;
-    public StateEnum m_CurrStateEnum { get; private set; }
-    public StateEnum m_LastStateEnum { get; private set; }
+    public LGCtrl CurLGCtrl;
+    public StateEnum CurrStateEnum { get; private set; }
+    public StateEnum LastStateEnum { get; private set; }
 
-    private StateBase m_Curstate = null;
-    private Dictionary<StateEnum, StateBase> m_StateDic;
+    private LGState m_Curstate = null;
+    private Dictionary<StateEnum, LGState> m_StateDic;
 
-    public LGFsm(LGCtrl lgctrl, StateEnum curStateEnum)
+    public LGFsm(LGCtrl lgCtrl, StateEnum curStateEnum)
     {
-        m_LGCtrl = lgctrl;
-        m_StateDic = new Dictionary<StateEnum, StateBase>();
+        CurLGCtrl = lgCtrl;
+        m_StateDic = new Dictionary<StateEnum, LGState>();
         m_StateDic[StateEnum.Idle] = new LGIdleState(this);
         m_StateDic[StateEnum.Move] = new LGMoveState(this);
         m_StateDic[StateEnum.Jump] = new LGJumpState(this);
+        m_StateDic[StateEnum.Attack] = new LGAttackState(this);
 
-        if (m_StateDic.ContainsKey(m_CurrStateEnum))
+        if (m_StateDic.ContainsKey(CurrStateEnum))
         {
             m_Curstate = m_StateDic[curStateEnum];
         }
@@ -32,7 +33,7 @@ public class LGFsm : AbstractFsm
 
     public override void ChangeState(StateEnum newStateEnum)
     {
-        if (m_CurrStateEnum == newStateEnum)
+        if (CurrStateEnum == newStateEnum)
         {
             return;
         }
@@ -42,15 +43,15 @@ public class LGFsm : AbstractFsm
             m_Curstate.OnExit();
         }
 
-        m_LastStateEnum = m_CurrStateEnum;
-        m_CurrStateEnum = newStateEnum;
+        LastStateEnum = CurrStateEnum;
+        CurrStateEnum = newStateEnum;
         m_Curstate = m_StateDic[newStateEnum];
         m_Curstate.OnEnter();
     }
 
     public override void GoBackLastState()
     {
-        ChangeState(m_LastStateEnum);
+        ChangeState(LastStateEnum);
     }
 
     public override T GetState<T>(StateEnum stateEnum)
@@ -60,6 +61,6 @@ public class LGFsm : AbstractFsm
 
     public StateEnum GetCurState()
     {
-        return m_CurrStateEnum;
+        return CurrStateEnum;
     }
 }
