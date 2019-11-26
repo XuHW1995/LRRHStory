@@ -6,7 +6,7 @@ using DG.Tweening;
 public class LGMoveState : LGState
 {
     //走跑表现切换时间
-    private float m_Walk2RunTime = 0.5f;
+    private float m_Walk2RunTime = 0.8f;
     private float m_Walk2RunBlend = 0;
 
     public LGMoveState(AbstractFsm fsm) : base(fsm)

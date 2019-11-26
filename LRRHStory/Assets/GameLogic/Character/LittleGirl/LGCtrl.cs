@@ -104,7 +104,7 @@ public class LGCtrl : MonoBehaviour
     void LGJumpEnd()
     {
         //Debug.Log("跳动画结束");
-        m_Fsm.GoBackLastState();        
+        //m_Fsm.GoBackLastState();        
     }
     #endregion
 }

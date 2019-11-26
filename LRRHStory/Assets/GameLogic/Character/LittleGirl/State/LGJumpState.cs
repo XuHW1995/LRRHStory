@@ -18,6 +18,12 @@ public class LGJumpState : LGState
         if (CurAnimatorStateInfo.IsName(LGAnimatorStateNameEnum.JumpState.ToString()))
         {
             CurLGFsm.CurLGCtrl.LGAnimator.SetInteger(LGAnimatorConditionEnum.CurState.ToString(), (int)LGStateEnum.LGJump);
+
+            Debug.Log("CurAnimatorStateInfo.normalizedTime" + CurAnimatorStateInfo.normalizedTime);
+            if (CurAnimatorStateInfo.normalizedTime > 1)
+            {
+                CurLGFsm.GoBackLastState();
+            }
         }
     }
 
