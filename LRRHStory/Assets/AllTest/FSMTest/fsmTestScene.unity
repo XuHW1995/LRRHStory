@@ -207,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 1106022033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -315,6 +315,7 @@ GameObject:
   - component: {fileID: 1989626635}
   - component: {fileID: 1989626634}
   - component: {fileID: 1989626637}
+  - component: {fileID: 1989626638}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -399,6 +400,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d6a77c2d2ecd244bfbbf44711d70b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1989626638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989626633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68018fe9cd14e6745a1f748c12fdb44f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TargetAgent: {fileID: 4697453750426632}
 --- !u!1 &1005173839866560
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +858,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4697453750426632}
   - component: {fileID: 95624349387748004}
-  - component: {fileID: 143996123821084160}
   - component: {fileID: 1347116267309675}
   m_Layer: 0
   m_Name: JunkoChan
@@ -2969,24 +2982,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0.6669091, z: 0.0917311}
     m_Extent: {x: 0.11524648, y: 0.038808584, z: 0.0117910355}
   m_DirtyAABB: 0
---- !u!143 &143996123821084160
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1347116267309674}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1.6
-  m_Radius: 0.2
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.001
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!1 &8962456351338468912
 GameObject:
   m_ObjectHideFlags: 0
@@ -3344,7 +3339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &8963978568085305250
 GameObject:
   m_ObjectHideFlags: 0

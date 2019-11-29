@@ -28,6 +28,9 @@ public class LGMoveState : LGState
         {
             CurLGFsm.CurLGCtrl.LGAnimator.SetInteger(LGAnimatorConditionEnum.CurState.ToString(), (int)LGStateEnum.LGMove);
         }
+
+        DisposeMove();
+        DisposeRotate();
     }
 
     public override void OnExit()
@@ -36,5 +39,23 @@ public class LGMoveState : LGState
         CurLGFsm.CurLGCtrl.LGAnimator.SetBool(LGAnimatorConditionEnum.ToMove.ToString(), false);
     }
 
+    #region 运动控制
+    //运动控制参数
+    private float m_MoveSpeed = 5;
 
+    private void DisposeMove()
+    {      
+        float input_V = Input.GetAxisRaw("Vertical");       
+        float curSpeed = m_MoveSpeed * input_V * Time.deltaTime;     
+        CurLGFsm.CurLGCtrl.transform.Translate(CurLGFsm.CurLGCtrl.transform.forward * curSpeed, Space.World);
+
+        Debug.Log("MoveInfo: \n Input_V is : " + input_V + "\n CurrentSpeed is : " + curSpeed + "\n CurrentForward is : " + CurLGFsm.CurLGCtrl.transform.forward);
+    }
+
+    private void DisposeRotate()
+    {
+        float input_H = Input.GetAxis("Horizontal");
+        CurLGFsm.CurLGCtrl.transform.Rotate(new Vector3(0, input_H, 0));
+    }
+    #endregion
 }
