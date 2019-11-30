@@ -6,6 +6,7 @@ public class LGJumpState : LGState
 {
     //运动控制参数
     private float m_JumpSpeed = 5;
+    private bool m_IsInSky = false;
 
     public LGJumpState(AbstractFsm fsm) : base(fsm) { }
 
@@ -29,13 +30,22 @@ public class LGJumpState : LGState
             }
         }
 
-        DisposeMove();
+        if (m_IsInSky)
+        {
+            DisposeMove();
+        }
     }
 
     public override void OnExit()
     {
         Debug.Log("退出跳状态");
         CurLGFsm.CurLGCtrl.LGAnimator.SetBool(LGAnimatorConditionEnum.ToJump.ToString(), false);
+        m_IsInSky = false;
+    }
+
+    public void SetInSky(bool isInSky)
+    {
+        m_IsInSky = isInSky;
     }
 
     private void DisposeMove()

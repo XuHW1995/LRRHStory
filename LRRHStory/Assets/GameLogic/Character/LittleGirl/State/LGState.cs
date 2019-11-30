@@ -64,8 +64,8 @@ public abstract class LGState : StateBase
         CurAnimatorStateInfo = CurLGFsm.CurLGCtrl.LGAnimator.GetCurrentAnimatorStateInfo(0);
         //TODO 此处回待机状态的逻辑写的感觉不太好，但是没有想到一个好的解决方式
         if (!Input.GetKey(KeyCode.W) 
-            && CurLGFsm.GetCurState() != StateEnum.Jump
-            && CurLGFsm.GetCurState() != StateEnum.Attack)
+            && CurLGFsm.GetCurStateEnum() != StateEnum.Jump
+            && CurLGFsm.GetCurStateEnum() != StateEnum.Attack)
         {
             CurLGFsm.ChangeState(StateEnum.Idle);
         }

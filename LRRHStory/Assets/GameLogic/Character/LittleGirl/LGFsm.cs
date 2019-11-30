@@ -5,8 +5,8 @@ using UnityEngine;
 public class LGFsm : AbstractFsm
 {
     public LGCtrl CurLGCtrl;
-    public StateEnum CurrStateEnum { get; private set; }
-    public StateEnum LastStateEnum { get; private set; }
+    public StateEnum m_CurrStateEnum { get; private set; }
+    public StateEnum m_LastStateEnum { get; private set; }
 
     private LGState m_Curstate = null;
     private Dictionary<StateEnum, LGState> m_StateDic;
@@ -20,7 +20,7 @@ public class LGFsm : AbstractFsm
         m_StateDic[StateEnum.Jump] = new LGJumpState(this);
         m_StateDic[StateEnum.Attack] = new LGAttackState(this);
 
-        if (m_StateDic.ContainsKey(CurrStateEnum))
+        if (m_StateDic.ContainsKey(m_CurrStateEnum))
         {
             m_Curstate = m_StateDic[curStateEnum];
         }
@@ -33,7 +33,7 @@ public class LGFsm : AbstractFsm
 
     public override void ChangeState(StateEnum newStateEnum)
     {
-        if (CurrStateEnum == newStateEnum)
+        if (m_CurrStateEnum == newStateEnum)
         {
             return;
         }
@@ -43,15 +43,15 @@ public class LGFsm : AbstractFsm
             m_Curstate.OnExit();
         }
 
-        LastStateEnum = CurrStateEnum;
-        CurrStateEnum = newStateEnum;
+        m_LastStateEnum = m_CurrStateEnum;
+        m_CurrStateEnum = newStateEnum;
         m_Curstate = m_StateDic[newStateEnum];
         m_Curstate.OnEnter();
     }
 
     public override void GoBackLastState()
     {
-        ChangeState(LastStateEnum);
+        ChangeState(m_LastStateEnum);
     }
 
     public override T GetState<T>(StateEnum stateEnum)
@@ -59,8 +59,13 @@ public class LGFsm : AbstractFsm
         return m_StateDic[stateEnum] as T;
     }
 
-    public StateEnum GetCurState()
+    public StateEnum GetCurStateEnum()
     {
-        return CurrStateEnum;
+        return m_CurrStateEnum;
+    }
+
+    public LGState GetCurState()
+    {
+        return m_StateDic[m_CurrStateEnum];
     }
 }

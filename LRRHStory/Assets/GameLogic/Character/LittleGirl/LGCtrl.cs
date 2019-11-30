@@ -69,7 +69,7 @@ public class LGCtrl : MonoBehaviour
        
     void HanderWUp(EventId eventenum, params object[] param)
     {
-        if (m_Fsm.GetCurState() == StateEnum.Move)
+        if (m_Fsm.GetCurStateEnum() == StateEnum.Move)
         {
             m_Fsm.ChangeState(StateEnum.Idle);
         }           
@@ -91,13 +91,15 @@ public class LGCtrl : MonoBehaviour
     //起跳
     void LGJumpLeaveFloor()
     {
-        //Debug.Log("起跳");
+        LGJumpState jumpState = (LGJumpState)m_Fsm.GetCurState();
+        jumpState.SetInSky(true);
     }
 
     //落地
     void LGJumpFallFloor()
     {
-        //Debug.Log("落地");
+        LGJumpState jumpState = (LGJumpState)m_Fsm.GetCurState();
+        jumpState.SetInSky(false);
     }
 
     //跳动画结束

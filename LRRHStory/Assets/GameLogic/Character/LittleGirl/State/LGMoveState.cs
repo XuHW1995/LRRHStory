@@ -42,6 +42,7 @@ public class LGMoveState : LGState
     #region 运动控制
     //运动控制参数
     private float m_MoveSpeed = 5;
+    private float m_RoateSpeed = 3;
 
     private void DisposeMove()
     {      
@@ -49,13 +50,13 @@ public class LGMoveState : LGState
         float curSpeed = m_MoveSpeed * input_V * Time.deltaTime;     
         CurLGFsm.CurLGCtrl.transform.Translate(CurLGFsm.CurLGCtrl.transform.forward * curSpeed, Space.World);
 
-        Debug.Log("MoveInfo: \n Input_V is : " + input_V + "\n CurrentSpeed is : " + curSpeed + "\n CurrentForward is : " + CurLGFsm.CurLGCtrl.transform.forward);
+        //Debug.Log("MoveInfo: \n Input_V is : " + input_V + "\n CurrentSpeed is : " + curSpeed + "\n CurrentForward is : " + CurLGFsm.CurLGCtrl.transform.forward);
     }
 
     private void DisposeRotate()
     {
         float input_H = Input.GetAxis("Horizontal");
-        CurLGFsm.CurLGCtrl.transform.Rotate(new Vector3(0, input_H, 0));
+        CurLGFsm.CurLGCtrl.transform.Rotate(new Vector3(0, input_H * m_RoateSpeed, 0), Space.Self);
     }
     #endregion
 }
