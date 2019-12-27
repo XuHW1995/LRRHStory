@@ -17,6 +17,10 @@ public class GameLauncher : MonoBehaviour
         Test.ModuleTest();
 
         UIMgr.S.OpenUI(UIID.EnterUI);
+
+#if DEBUG_MODEL
+        Debug.Log("aaa");
+#endif
     }
 
     void Update()
