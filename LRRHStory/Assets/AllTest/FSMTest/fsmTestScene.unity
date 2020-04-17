@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TerrainGroup_0
       objectReference: {fileID: 0}
+    - target: {fileID: 3571909002235352545, guid: 27a5d2f3ae61a0f47b8fb4bb964524da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3571909002235352547, guid: 27a5d2f3ae61a0f47b8fb4bb964524da,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -836,8 +841,8 @@ GameObject:
   - component: {fileID: 4697453750426632}
   - component: {fileID: 95624349387748004}
   - component: {fileID: 1347116267309675}
-  - component: {fileID: 1347116267309676}
   - component: {fileID: 1347116267309677}
+  - component: {fileID: 1347116267309676}
   m_Layer: 0
   m_Name: JunkoChan
   m_TagString: Untagged
@@ -869,7 +874,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2529,7 +2534,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 821d72088ba26e741bd207e436bd320e, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -3211,6 +3216,8 @@ GameObject:
   - component: {fileID: 8967279937991147226}
   - component: {fileID: 8963749961710432908}
   - component: {fileID: 8963749961710432907}
+  - component: {fileID: 8963749961710432910}
+  - component: {fileID: 8963749961710432909}
   m_Layer: 0
   m_Name: AcquireChan
   m_TagString: Untagged
@@ -3249,6 +3256,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c71140ceab4f14eb24ffe9b840b657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &8963749961710432909
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8963749961710432906}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &8963749961710432910
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8963749961710432906}
+  m_Material: {fileID: 13400000, guid: 46dee105741c4e44cb0fa0b7cf252fc3, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1 &8963754983119856728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3340,8 +3377,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8965663807783927036}
-  - component: {fileID: 9045176220649076978}
-  - component: {fileID: 8980811243986706864}
   m_Layer: 0
   m_Name: AcquireChan_Control
   m_TagString: Untagged
@@ -4301,22 +4336,6 @@ Transform:
   m_Father: {fileID: 8965604110854355354}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &8980811243986706864
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8963945833810390160}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!137 &9044700569719103902
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -4397,20 +4416,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000000044703484, y: -0.15965968, z: 0.008313984}
     m_Extent: {x: 0.31927878, y: 0.93674415, z: 0.28311962}
   m_DirtyAABB: 0
---- !u!136 &9045176220649076978
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8963945833810390160}
-  m_Material: {fileID: 13400000, guid: 46dee105741c4e44cb0fa0b7cf252fc3, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 1.8
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!137 &9045690433080467690
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
