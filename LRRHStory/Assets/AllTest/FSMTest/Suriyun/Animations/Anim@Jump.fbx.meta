@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 844faa9798b20d04d9621efb47d6ba3e
 ModelImporter:
-  serializedVersion: 25
+  serializedVersion: 19300
   internalIDToNameTable:
   - first:
       1: 100000
@@ -371,135 +371,132 @@ ModelImporter:
     second: nurbsCircle9
   - first:
       1: 100244
-    second: pCube1
-  - first:
-      1: 100246
     second: PinkyFinger1_L
   - first:
-      1: 100248
+      1: 100246
     second: PinkyFinger1_R
   - first:
-      1: 100250
+      1: 100248
     second: PinkyFinger2_L
   - first:
-      1: 100252
+      1: 100250
     second: PinkyFinger2_R
   - first:
-      1: 100254
+      1: 100252
     second: PinkyFinger3_L
   - first:
-      1: 100256
+      1: 100254
     second: PinkyFinger3_R
   - first:
-      1: 100258
+      1: 100256
     second: PinkyFinger4_L
   - first:
-      1: 100260
+      1: 100258
     second: PinkyFinger4_R
   - first:
-      1: 100262
+      1: 100260
     second: RingFinger1_L
   - first:
-      1: 100264
+      1: 100262
     second: RingFinger1_R
   - first:
-      1: 100266
+      1: 100264
     second: RingFinger2_L
   - first:
-      1: 100268
+      1: 100266
     second: RingFinger2_R
   - first:
-      1: 100270
+      1: 100268
     second: RingFinger3_L
   - first:
-      1: 100272
+      1: 100270
     second: RingFinger3_R
   - first:
-      1: 100274
+      1: 100272
     second: RingFinger4_L
   - first:
-      1: 100276
+      1: 100274
     second: RingFinger4_R
   - first:
-      1: 100278
+      1: 100276
     second: Root_M
   - first:
-      1: 100280
+      1: 100278
     second: RootPart1_M
   - first:
-      1: 100282
+      1: 100280
     second: Scapula_L
   - first:
-      1: 100284
+      1: 100282
     second: Scapula_R
   - first:
-      1: 100286
+      1: 100284
     second: Shoulder_L
   - first:
-      1: 100288
+      1: 100286
     second: Shoulder_R
   - first:
-      1: 100290
+      1: 100288
     second: Skirt_La
   - first:
-      1: 100292
+      1: 100290
     second: Skirt_Ra
   - first:
-      1: 100294
+      1: 100292
     second: SkirtLb
   - first:
-      1: 100296
+      1: 100294
     second: SkirtLc
   - first:
-      1: 100298
+      1: 100296
     second: SkirtRb
   - first:
-      1: 100300
+      1: 100298
     second: SkirtRc
   - first:
-      1: 100302
+      1: 100300
     second: Spine1_M
   - first:
-      1: 100304
+      1: 100302
     second: ThumbFinger1_L
   - first:
-      1: 100306
+      1: 100304
     second: ThumbFinger1_R
   - first:
-      1: 100308
+      1: 100306
     second: ThumbFinger2_L
   - first:
-      1: 100310
+      1: 100308
     second: ThumbFinger2_R
   - first:
-      1: 100312
+      1: 100310
     second: ThumbFinger3_L
   - first:
-      1: 100314
+      1: 100312
     second: ThumbFinger3_R
   - first:
-      1: 100316
+      1: 100314
     second: ThumbFinger4_L
   - first:
-      1: 100318
+      1: 100316
     second: ThumbFinger4_R
   - first:
-      1: 100320
+      1: 100318
     second: Toes_L
   - first:
-      1: 100322
+      1: 100320
     second: Toes_R
   - first:
-      1: 100324
+      1: 100322
     second: ToesEnd_L
   - first:
-      1: 100326
+      1: 100324
     second: ToesEnd_R
   - first:
-      1: 100328
+      1: 100326
     second: Wrist_L
   - first:
-      1: 100330
+      1: 100328
     second: Wrist_R
   - first:
       4: 400000
@@ -869,135 +866,132 @@ ModelImporter:
     second: nurbsCircle9
   - first:
       4: 400244
-    second: pCube1
-  - first:
-      4: 400246
     second: PinkyFinger1_L
   - first:
-      4: 400248
+      4: 400246
     second: PinkyFinger1_R
   - first:
-      4: 400250
+      4: 400248
     second: PinkyFinger2_L
   - first:
-      4: 400252
+      4: 400250
     second: PinkyFinger2_R
   - first:
-      4: 400254
+      4: 400252
     second: PinkyFinger3_L
   - first:
-      4: 400256
+      4: 400254
     second: PinkyFinger3_R
   - first:
-      4: 400258
+      4: 400256
     second: PinkyFinger4_L
   - first:
-      4: 400260
+      4: 400258
     second: PinkyFinger4_R
   - first:
-      4: 400262
+      4: 400260
     second: RingFinger1_L
   - first:
-      4: 400264
+      4: 400262
     second: RingFinger1_R
   - first:
-      4: 400266
+      4: 400264
     second: RingFinger2_L
   - first:
-      4: 400268
+      4: 400266
     second: RingFinger2_R
   - first:
-      4: 400270
+      4: 400268
     second: RingFinger3_L
   - first:
-      4: 400272
+      4: 400270
     second: RingFinger3_R
   - first:
-      4: 400274
+      4: 400272
     second: RingFinger4_L
   - first:
-      4: 400276
+      4: 400274
     second: RingFinger4_R
   - first:
-      4: 400278
+      4: 400276
     second: Root_M
   - first:
-      4: 400280
+      4: 400278
     second: RootPart1_M
   - first:
-      4: 400282
+      4: 400280
     second: Scapula_L
   - first:
-      4: 400284
+      4: 400282
     second: Scapula_R
   - first:
-      4: 400286
+      4: 400284
     second: Shoulder_L
   - first:
-      4: 400288
+      4: 400286
     second: Shoulder_R
   - first:
-      4: 400290
+      4: 400288
     second: Skirt_La
   - first:
-      4: 400292
+      4: 400290
     second: Skirt_Ra
   - first:
-      4: 400294
+      4: 400292
     second: SkirtLb
   - first:
-      4: 400296
+      4: 400294
     second: SkirtLc
   - first:
-      4: 400298
+      4: 400296
     second: SkirtRb
   - first:
-      4: 400300
+      4: 400298
     second: SkirtRc
   - first:
-      4: 400302
+      4: 400300
     second: Spine1_M
   - first:
-      4: 400304
+      4: 400302
     second: ThumbFinger1_L
   - first:
-      4: 400306
+      4: 400304
     second: ThumbFinger1_R
   - first:
-      4: 400308
+      4: 400306
     second: ThumbFinger2_L
   - first:
-      4: 400310
+      4: 400308
     second: ThumbFinger2_R
   - first:
-      4: 400312
+      4: 400310
     second: ThumbFinger3_L
   - first:
-      4: 400314
+      4: 400312
     second: ThumbFinger3_R
   - first:
-      4: 400316
+      4: 400314
     second: ThumbFinger4_L
   - first:
-      4: 400318
+      4: 400316
     second: ThumbFinger4_R
   - first:
-      4: 400320
+      4: 400318
     second: Toes_L
   - first:
-      4: 400322
+      4: 400320
     second: Toes_R
   - first:
-      4: 400324
+      4: 400322
     second: ToesEnd_L
   - first:
-      4: 400326
+      4: 400324
     second: ToesEnd_R
   - first:
-      4: 400328
+      4: 400326
     second: Wrist_L
   - first:
-      4: 400330
+      4: 400328
     second: Wrist_R
   - first:
       23: 2300000
@@ -1021,9 +1015,6 @@ ModelImporter:
       23: 2300012
     second: Lash
   - first:
-      23: 2300014
-    second: pCube1
-  - first:
       33: 3300000
     second: Brow
   - first:
@@ -1045,44 +1036,35 @@ ModelImporter:
       33: 3300012
     second: Lash
   - first:
-      33: 3300014
-    second: pCube1
-  - first:
       43: 4300000
-    second: pCube1
-  - first:
-      43: 4300002
     second: FaceB
   - first:
-      43: 4300004
+      43: 4300002
     second: Lash
   - first:
-      43: 4300006
+      43: 4300004
     second: Face_A
   - first:
-      43: 4300008
+      43: 4300006
     second: Eye_base
   - first:
-      43: 4300010
+      43: 4300008
     second: Eye
   - first:
-      43: 4300012
+      43: 4300010
     second: cheek
   - first:
-      43: 4300014
+      43: 4300012
     second: Brow
   - first:
       74: 7400000
     second: Jump
   - first:
-      95: 9500000
-    second: //RootNode
-  - first:
       41386430: 2186277476908879412
     second: ImportLogs
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -1094,13 +1076,13 @@ ModelImporter:
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
-      copied configuration does not match position in animation file:\n\t'Hip_L' :
-      position error = 10.547441 mm\n\t'Ankle_L' : position error = 2.049482 mm\n"
+      copied configuration does not match position in animation file:\n\t'Hip_L'
+      : position error = 10.547441 mm\n\t'Ankle_L' : position error = 2.049482 mm\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Anim@Jump' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'Scapula_R' has translation animation that will
-      be discarded.\n\t'Scapula_L' has translation animation that will be discarded.\n"
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Scapula_R' has translation animation that
+      will be discarded.\n\t'Scapula_L' has translation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -1116,7 +1098,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Jump
       takeName: Aki@Jump
-      internalID: 7400000
+      internalID: 0
       firstFrame: 304
       lastFrame: 354
       wrapMode: 0
@@ -1159,335 +1141,9 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Group
-        weight: 1
-      - path: Group/Main
-        weight: 1
-      - path: Group/Main/MotionSystem
-        weight: 1
-      - path: Group/Main/MotionSystem/FKIKSystem
-        weight: 1
-      - path: Group/Main/MotionSystem/FKIKSystem/FKIKParentConstraintSpine_M
-        weight: 1
-      - path: Group/Main/MotionSystem/FKIKSystem/FKIKParentConstraintSpine_M/FKIKSpine_M
-        weight: 1
-      - path: Group/Main/MotionSystem/FKSystem
-        weight: 1
-      - path: Group/Main/MotionSystem/FKSystem/FKOffsetRoot_M
-        weight: 1
-      - path: Group/Main/MotionSystem/FKSystem/FKOffsetRoot_M/FKExtraRoot_M
-        weight: 1
-      - path: Group/Main/MotionSystem/FKSystem/FKOffsetRoot_M/FKExtraRoot_M/FKXRoot_M
-        weight: 1
-      - path: Group/Main/MotionSystem/FKSystem/FKOffsetRoot_M/FKExtraRoot_M/HipSwingerStabilizer
-        weight: 1
-      - path: Group/Main/MotionSystem/FKSystem/FKOffsetRoot_M/FKExtraRoot_M/HipSwingerStabilizer/FKRoot_M
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKHandle
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKHandle/IKRootConstraint
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKHandle/IKRootConstraint/IKOffsetSpine1_M
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKHandle/IKRootConstraint/IKOffsetSpine1_M/IKExtraSpine1_M
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKHandle/IKRootConstraint/IKOffsetSpine1_M/IKExtraSpine1_M/IKSpine1_M
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKHandle/IKRootConstraint/IKOffsetSpine2_M
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKHandle/IKRootConstraint/IKOffsetSpine2_M/IKExtraSpine2_M
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKHandle/IKRootConstraint/IKOffsetSpine2_M/IKExtraSpine2_M/IKSpine2_M
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKHandle/IKScalerRoot_M
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKJoints
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKJoints/IKParentConstraintRoot_M
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKJoints/IKParentConstraintRoot_M/IKXOffsetRoot_M
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKJoints/IKParentConstraintRoot_M/IKXOffsetRoot_M/IKXRoot_M
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKJoints/IKSpSpineOffset_M
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKJoints/IKSpSpineOffset_M/IKSpRoot_M
-        weight: 1
-      - path: Group/Main/MotionSystem/IKSystem/IKJoints/IKSpSpineOffset_M/IKSpRoot_M/IKSpRootFollowOffset_M
-        weight: 1
-      - path: Root_M
-        weight: 1
-      - path: Root_M/Hip_L
-        weight: 1
-      - path: Root_M/Hip_L/Knee_L
-        weight: 1
-      - path: Root_M/Hip_L/Knee_L/Ankle_L
-        weight: 1
-      - path: Root_M/Hip_L/Knee_L/Ankle_L/Toes_L
-        weight: 1
-      - path: Root_M/Hip_L/Knee_L/Ankle_L/Toes_L/ToesEnd_L
-        weight: 1
-      - path: Root_M/Hip_R
-        weight: 1
-      - path: Root_M/Hip_R/Knee_R
-        weight: 1
-      - path: Root_M/Hip_R/Knee_R/Ankle_R
-        weight: 1
-      - path: Root_M/Hip_R/Knee_R/Ankle_R/Toes_R
-        weight: 1
-      - path: Root_M/Hip_R/Knee_R/Ankle_R/Toes_R/ToesEnd_R
-        weight: 1
-      - path: Root_M/RootPart1_M
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Chest_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Chest_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/Brow
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/cheek
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/Eye
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/Eye1_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/Eye1_L/EyeEnd_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/Eye1_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/Eye1_R/EyeEnd_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/Eye_base
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/Face_A
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/FaceB
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/FaceB/Lash
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint2
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint2/joint3
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint2/joint3/joint4
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint2/joint3/joint4/joint5
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint2/joint3/joint4/joint5/joint6
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint2/joint3/joint4/joint5/joint6/joint7
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint8
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint8/joint9
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint8/joint9/joint10
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint8/joint9/joint10/joint11
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint8/joint9/joint10/joint11/joint12
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint13
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint13/joint14
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint13/joint14/joint15
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint13/joint14/joint15/joint16
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint17
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint17/joint18
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint17/joint18/joint28
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint17/joint18/joint28/joint29
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint17/joint18/joint28/joint29/joint30
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint21
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint21/joint22
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint21/joint22/joint23
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint24
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint24/joint25
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint24/joint25/joint26
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint24/joint25/joint26/joint27
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint31
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint31/joint32
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint31/joint32/joint33
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint31/joint32/joint33/joint34
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint31/joint32/joint33/joint34/joint35
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint36
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint36/joint37
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint36/joint37/joint38
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint36/joint37/joint38/joint39
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint40
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint40/joint41
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint40/joint41/joint42
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint40/joint41/joint42/joint43
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint40/joint41/joint42/joint43/joint44
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint45
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint45/joint46
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/HeadEnd_M/Hair_Root/joint45/joint46/joint47
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/Jaw_M
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Neck_M/Head_M/Jaw_M/JawEnd_M
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/PinkyFinger1_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/PinkyFinger1_L/PinkyFinger2_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/PinkyFinger1_L/PinkyFinger2_L/PinkyFinger3_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/PinkyFinger1_L/PinkyFinger2_L/PinkyFinger3_L/PinkyFinger4_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/RingFinger1_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/RingFinger1_L/RingFinger2_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/RingFinger1_L/RingFinger2_L/RingFinger3_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/Cup_L/RingFinger1_L/RingFinger2_L/RingFinger3_L/RingFinger4_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/IndexFinger1_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/IndexFinger1_L/IndexFinger2_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/IndexFinger1_L/IndexFinger2_L/IndexFinger3_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/IndexFinger1_L/IndexFinger2_L/IndexFinger3_L/IndexFinger4_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/MiddleFinger1_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/MiddleFinger1_L/MiddleFinger2_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/MiddleFinger1_L/MiddleFinger2_L/MiddleFinger3_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/MiddleFinger1_L/MiddleFinger2_L/MiddleFinger3_L/MiddleFinger4_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/ThumbFinger1_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/ThumbFinger1_L/ThumbFinger2_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/ThumbFinger1_L/ThumbFinger2_L/ThumbFinger3_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_L/Shoulder_L/Elbow_L/Wrist_L/ThumbFinger1_L/ThumbFinger2_L/ThumbFinger3_L/ThumbFinger4_L
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/PinkyFinger1_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/PinkyFinger1_R/PinkyFinger2_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/PinkyFinger1_R/PinkyFinger2_R/PinkyFinger3_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/PinkyFinger1_R/PinkyFinger2_R/PinkyFinger3_R/PinkyFinger4_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/RingFinger1_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/RingFinger1_R/RingFinger2_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/RingFinger1_R/RingFinger2_R/RingFinger3_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/Cup_R/RingFinger1_R/RingFinger2_R/RingFinger3_R/RingFinger4_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/IndexFinger1_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/IndexFinger1_R/IndexFinger2_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/IndexFinger1_R/IndexFinger2_R/IndexFinger3_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/IndexFinger1_R/IndexFinger2_R/IndexFinger3_R/IndexFinger4_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/MiddleFinger1_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R/MiddleFinger3_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R/MiddleFinger3_R/MiddleFinger4_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/ThumbFinger1_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/ThumbFinger1_R/ThumbFinger2_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/ThumbFinger1_R/ThumbFinger2_R/ThumbFinger3_R
-        weight: 1
-      - path: Root_M/RootPart1_M/Spine1_M/Chest_M/Scapula_R/Shoulder_R/Elbow_R/Wrist_R/ThumbFinger1_R/ThumbFinger2_R/ThumbFinger3_R/ThumbFinger4_R
-        weight: 1
-      - path: Root_M/Skirt_La
-        weight: 1
-      - path: Root_M/Skirt_Ra
-        weight: 1
-      - path: Root_M/SkirtLb
-        weight: 1
-      - path: Root_M/SkirtLc
-        weight: 1
-      - path: Root_M/SkirtRb
-        weight: 1
-      - path: Root_M/SkirtRc
-        weight: 1
-      maskType: 1
-      maskSource: {fileID: 101100000, guid: fb40a6d6e1dd07d4c93e8332d8cddbb7, type: 2}
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 300.9
     isReadable: 1
   meshes:
@@ -1496,6 +1152,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
@@ -1526,7 +1183,6 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
     serializedVersion: 3
     human:
@@ -2775,8 +2431,10 @@ ModelImporter:
     hasExtraRoot: 1
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 2
   additionalBone: 0
   userData: 
   assetBundleName: 
