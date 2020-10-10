@@ -1,182 +1,530 @@
 fileFormatVersion: 2
 guid: 08ebdddd656a3d24ba261e12541d8ba7
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Body
-    100002: Chest
-    100004: DArm_L_
-    100006: DArm_R_
-    100008: DLeg_L_
-    100010: DLeg_R_
-    100012: Eye[]
-    100014: Eye_L_
-    100016: Eye_R_
-    100018: Face
-    100020: Face 1
-    100022: Foot_L_
-    100024: Foot_R_
-    100026: Hair_Root
-    100028: Hair_Yoko1_L_
-    100030: Hair_Yoko1_R_
-    100032: Hair_Yoko_L_
-    100034: Hair_Yoko_R_
-    100036: Hand_L_
-    100038: Hand_R_
-    100040: Head
-    100042: Hip
-    100044: Hito1_L_
-    100046: Hito1_R_
-    100048: Hito2_L_
-    100050: Hito2_R_
-    100052: //RootNode
-    100054: Katana
-    100056: Katana 1
-    100058: Katana_hand
-    100060: Koyu1_L_
-    100062: Koyu1_R_
-    100064: Koyu2_L_
-    100066: Koyu2_R_
-    100068: Kusu1_L_
-    100070: Kusu1_R_
-    100072: Kusu2_L_
-    100074: Kusu2_R_
-    100076: Mesh
-    100078: MuneRoot
-    100080: Naka1_L_
-    100082: Naka1_R_
-    100084: Naka2_L_
-    100086: Naka2_R_
-    100088: Neck
-    100090: Oppai_L_
-    100092: Oppai_R_
-    100094: Oya1_L_
-    100096: Oya1_R_
-    100098: Oya2_L_
-    100100: Oya2_R_
-    100102: Shoulder_L_
-    100104: Shoulder_R_
-    100106: Skirt_back
-    100108: Skirt_backside_L_
-    100110: Skirt_backside_R_
-    100112: Skirt_front
-    100114: Skirt_frontside_L_
-    100116: Skirt_frontside_R_
-    100118: Spine
-    100120: Toe_L_
-    100122: Toe_R_
-    100124: UArm_L_
-    100126: UArm_R_
-    100128: ULeg_L_
-    100130: ULeg_R_
-    100132: XSBone_000
-    400000: Body
-    400002: Chest
-    400004: DArm_L_
-    400006: DArm_R_
-    400008: DLeg_L_
-    400010: DLeg_R_
-    400012: Eye[]
-    400014: Eye_L_
-    400016: Eye_R_
-    400018: Face
-    400020: Face 1
-    400022: Foot_L_
-    400024: Foot_R_
-    400026: Hair_Root
-    400028: Hair_Yoko1_L_
-    400030: Hair_Yoko1_R_
-    400032: Hair_Yoko_L_
-    400034: Hair_Yoko_R_
-    400036: Hand_L_
-    400038: Hand_R_
-    400040: Head
-    400042: Hip
-    400044: Hito1_L_
-    400046: Hito1_R_
-    400048: Hito2_L_
-    400050: Hito2_R_
-    400052: //RootNode
-    400054: Katana
-    400056: Katana 1
-    400058: Katana_hand
-    400060: Koyu1_L_
-    400062: Koyu1_R_
-    400064: Koyu2_L_
-    400066: Koyu2_R_
-    400068: Kusu1_L_
-    400070: Kusu1_R_
-    400072: Kusu2_L_
-    400074: Kusu2_R_
-    400076: Mesh
-    400078: MuneRoot
-    400080: Naka1_L_
-    400082: Naka1_R_
-    400084: Naka2_L_
-    400086: Naka2_R_
-    400088: Neck
-    400090: Oppai_L_
-    400092: Oppai_R_
-    400094: Oya1_L_
-    400096: Oya1_R_
-    400098: Oya2_L_
-    400100: Oya2_R_
-    400102: Shoulder_L_
-    400104: Shoulder_R_
-    400106: Skirt_back
-    400108: Skirt_backside_L_
-    400110: Skirt_backside_R_
-    400112: Skirt_front
-    400114: Skirt_frontside_L_
-    400116: Skirt_frontside_R_
-    400118: Spine
-    400120: Toe_L_
-    400122: Toe_R_
-    400124: UArm_L_
-    400126: UArm_R_
-    400128: ULeg_L_
-    400130: ULeg_R_
-    400132: XSBone_000
-    4300000: Body
-    4300002: Face
-    4300004: Eye[]
-    4300006: Katana
-    7400000: Idle
-    7400002: Walk
-    7400004: Run
-    7400006: Crouch
-    7400008: CrouchingWalk
-    7400010: Sword_Ready
-    7400012: Sword_Slash3
-    7400014: Sword_Slash
-    7400016: Sword_Slash2
-    7400018: Sword_JumpSlash
-    7400020: Sword_Guard
-    7400022: Sword_Parry
-    7400024: ChainSaw_Idle
-    7400026: ChainSaw_Slash1
-    7400028: ChainSaw_Slash2
-    7400030: NailGun_Idle
-    7400032: NailGun_Aim
-    7400034: Throw
-    7400036: Jump
-    7400038: Jump_ascending
-    7400040: Falling
-    7400042: Grounded
-    7400044: Damaged
-    7400046: Down
-    7400048: Dizzy
-    7400050: Sleep
-    7400052: WakeUp
-    7400054: Cry
-    7400056: Irritated
-    7400058: Happy
-    7400060: Saltbae
-    9500000: //RootNode
-    13700000: Body
-    13700002: Eye[]
-    13700004: Face
-    13700006: Katana 1
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Body
+  - first:
+      1: 100002
+    second: Chest
+  - first:
+      1: 100004
+    second: DArm_L_
+  - first:
+      1: 100006
+    second: DArm_R_
+  - first:
+      1: 100008
+    second: DLeg_L_
+  - first:
+      1: 100010
+    second: DLeg_R_
+  - first:
+      1: 100012
+    second: Eye[]
+  - first:
+      1: 100014
+    second: Eye_L_
+  - first:
+      1: 100016
+    second: Eye_R_
+  - first:
+      1: 100018
+    second: Face
+  - first:
+      1: 100020
+    second: Face 1
+  - first:
+      1: 100022
+    second: Foot_L_
+  - first:
+      1: 100024
+    second: Foot_R_
+  - first:
+      1: 100026
+    second: Hair_Root
+  - first:
+      1: 100028
+    second: Hair_Yoko1_L_
+  - first:
+      1: 100030
+    second: Hair_Yoko1_R_
+  - first:
+      1: 100032
+    second: Hair_Yoko_L_
+  - first:
+      1: 100034
+    second: Hair_Yoko_R_
+  - first:
+      1: 100036
+    second: Hand_L_
+  - first:
+      1: 100038
+    second: Hand_R_
+  - first:
+      1: 100040
+    second: Head
+  - first:
+      1: 100042
+    second: Hip
+  - first:
+      1: 100044
+    second: Hito1_L_
+  - first:
+      1: 100046
+    second: Hito1_R_
+  - first:
+      1: 100048
+    second: Hito2_L_
+  - first:
+      1: 100050
+    second: Hito2_R_
+  - first:
+      1: 100052
+    second: //RootNode
+  - first:
+      1: 100054
+    second: Katana
+  - first:
+      1: 100056
+    second: Katana 1
+  - first:
+      1: 100058
+    second: Katana_hand
+  - first:
+      1: 100060
+    second: Koyu1_L_
+  - first:
+      1: 100062
+    second: Koyu1_R_
+  - first:
+      1: 100064
+    second: Koyu2_L_
+  - first:
+      1: 100066
+    second: Koyu2_R_
+  - first:
+      1: 100068
+    second: Kusu1_L_
+  - first:
+      1: 100070
+    second: Kusu1_R_
+  - first:
+      1: 100072
+    second: Kusu2_L_
+  - first:
+      1: 100074
+    second: Kusu2_R_
+  - first:
+      1: 100076
+    second: Mesh
+  - first:
+      1: 100078
+    second: MuneRoot
+  - first:
+      1: 100080
+    second: Naka1_L_
+  - first:
+      1: 100082
+    second: Naka1_R_
+  - first:
+      1: 100084
+    second: Naka2_L_
+  - first:
+      1: 100086
+    second: Naka2_R_
+  - first:
+      1: 100088
+    second: Neck
+  - first:
+      1: 100090
+    second: Oppai_L_
+  - first:
+      1: 100092
+    second: Oppai_R_
+  - first:
+      1: 100094
+    second: Oya1_L_
+  - first:
+      1: 100096
+    second: Oya1_R_
+  - first:
+      1: 100098
+    second: Oya2_L_
+  - first:
+      1: 100100
+    second: Oya2_R_
+  - first:
+      1: 100102
+    second: Shoulder_L_
+  - first:
+      1: 100104
+    second: Shoulder_R_
+  - first:
+      1: 100106
+    second: Skirt_back
+  - first:
+      1: 100108
+    second: Skirt_backside_L_
+  - first:
+      1: 100110
+    second: Skirt_backside_R_
+  - first:
+      1: 100112
+    second: Skirt_front
+  - first:
+      1: 100114
+    second: Skirt_frontside_L_
+  - first:
+      1: 100116
+    second: Skirt_frontside_R_
+  - first:
+      1: 100118
+    second: Spine
+  - first:
+      1: 100120
+    second: Toe_L_
+  - first:
+      1: 100122
+    second: Toe_R_
+  - first:
+      1: 100124
+    second: UArm_L_
+  - first:
+      1: 100126
+    second: UArm_R_
+  - first:
+      1: 100128
+    second: ULeg_L_
+  - first:
+      1: 100130
+    second: ULeg_R_
+  - first:
+      1: 100132
+    second: XSBone_000
+  - first:
+      4: 400000
+    second: Body
+  - first:
+      4: 400002
+    second: Chest
+  - first:
+      4: 400004
+    second: DArm_L_
+  - first:
+      4: 400006
+    second: DArm_R_
+  - first:
+      4: 400008
+    second: DLeg_L_
+  - first:
+      4: 400010
+    second: DLeg_R_
+  - first:
+      4: 400012
+    second: Eye[]
+  - first:
+      4: 400014
+    second: Eye_L_
+  - first:
+      4: 400016
+    second: Eye_R_
+  - first:
+      4: 400018
+    second: Face
+  - first:
+      4: 400020
+    second: Face 1
+  - first:
+      4: 400022
+    second: Foot_L_
+  - first:
+      4: 400024
+    second: Foot_R_
+  - first:
+      4: 400026
+    second: Hair_Root
+  - first:
+      4: 400028
+    second: Hair_Yoko1_L_
+  - first:
+      4: 400030
+    second: Hair_Yoko1_R_
+  - first:
+      4: 400032
+    second: Hair_Yoko_L_
+  - first:
+      4: 400034
+    second: Hair_Yoko_R_
+  - first:
+      4: 400036
+    second: Hand_L_
+  - first:
+      4: 400038
+    second: Hand_R_
+  - first:
+      4: 400040
+    second: Head
+  - first:
+      4: 400042
+    second: Hip
+  - first:
+      4: 400044
+    second: Hito1_L_
+  - first:
+      4: 400046
+    second: Hito1_R_
+  - first:
+      4: 400048
+    second: Hito2_L_
+  - first:
+      4: 400050
+    second: Hito2_R_
+  - first:
+      4: 400052
+    second: //RootNode
+  - first:
+      4: 400054
+    second: Katana
+  - first:
+      4: 400056
+    second: Katana 1
+  - first:
+      4: 400058
+    second: Katana_hand
+  - first:
+      4: 400060
+    second: Koyu1_L_
+  - first:
+      4: 400062
+    second: Koyu1_R_
+  - first:
+      4: 400064
+    second: Koyu2_L_
+  - first:
+      4: 400066
+    second: Koyu2_R_
+  - first:
+      4: 400068
+    second: Kusu1_L_
+  - first:
+      4: 400070
+    second: Kusu1_R_
+  - first:
+      4: 400072
+    second: Kusu2_L_
+  - first:
+      4: 400074
+    second: Kusu2_R_
+  - first:
+      4: 400076
+    second: Mesh
+  - first:
+      4: 400078
+    second: MuneRoot
+  - first:
+      4: 400080
+    second: Naka1_L_
+  - first:
+      4: 400082
+    second: Naka1_R_
+  - first:
+      4: 400084
+    second: Naka2_L_
+  - first:
+      4: 400086
+    second: Naka2_R_
+  - first:
+      4: 400088
+    second: Neck
+  - first:
+      4: 400090
+    second: Oppai_L_
+  - first:
+      4: 400092
+    second: Oppai_R_
+  - first:
+      4: 400094
+    second: Oya1_L_
+  - first:
+      4: 400096
+    second: Oya1_R_
+  - first:
+      4: 400098
+    second: Oya2_L_
+  - first:
+      4: 400100
+    second: Oya2_R_
+  - first:
+      4: 400102
+    second: Shoulder_L_
+  - first:
+      4: 400104
+    second: Shoulder_R_
+  - first:
+      4: 400106
+    second: Skirt_back
+  - first:
+      4: 400108
+    second: Skirt_backside_L_
+  - first:
+      4: 400110
+    second: Skirt_backside_R_
+  - first:
+      4: 400112
+    second: Skirt_front
+  - first:
+      4: 400114
+    second: Skirt_frontside_L_
+  - first:
+      4: 400116
+    second: Skirt_frontside_R_
+  - first:
+      4: 400118
+    second: Spine
+  - first:
+      4: 400120
+    second: Toe_L_
+  - first:
+      4: 400122
+    second: Toe_R_
+  - first:
+      4: 400124
+    second: UArm_L_
+  - first:
+      4: 400126
+    second: UArm_R_
+  - first:
+      4: 400128
+    second: ULeg_L_
+  - first:
+      4: 400130
+    second: ULeg_R_
+  - first:
+      4: 400132
+    second: XSBone_000
+  - first:
+      43: 4300000
+    second: Body
+  - first:
+      43: 4300002
+    second: Face
+  - first:
+      43: 4300004
+    second: Eye[]
+  - first:
+      43: 4300006
+    second: Katana
+  - first:
+      74: 7400000
+    second: Idle
+  - first:
+      74: 7400002
+    second: Walk
+  - first:
+      74: 7400004
+    second: Run
+  - first:
+      74: 7400006
+    second: Crouch
+  - first:
+      74: 7400008
+    second: CrouchingWalk
+  - first:
+      74: 7400010
+    second: Sword_Ready
+  - first:
+      74: 7400012
+    second: Sword_Slash3
+  - first:
+      74: 7400014
+    second: Sword_Slash
+  - first:
+      74: 7400016
+    second: Sword_Slash2
+  - first:
+      74: 7400018
+    second: Sword_JumpSlash
+  - first:
+      74: 7400020
+    second: Sword_Guard
+  - first:
+      74: 7400022
+    second: Sword_Parry
+  - first:
+      74: 7400024
+    second: ChainSaw_Idle
+  - first:
+      74: 7400026
+    second: ChainSaw_Slash1
+  - first:
+      74: 7400028
+    second: ChainSaw_Slash2
+  - first:
+      74: 7400030
+    second: NailGun_Idle
+  - first:
+      74: 7400032
+    second: NailGun_Aim
+  - first:
+      74: 7400034
+    second: Throw
+  - first:
+      74: 7400036
+    second: Jump
+  - first:
+      74: 7400038
+    second: Jump_ascending
+  - first:
+      74: 7400040
+    second: Falling
+  - first:
+      74: 7400042
+    second: Grounded
+  - first:
+      74: 7400044
+    second: Damaged
+  - first:
+      74: 7400046
+    second: Down
+  - first:
+      74: 7400048
+    second: Dizzy
+  - first:
+      74: 7400050
+    second: Sleep
+  - first:
+      74: 7400052
+    second: WakeUp
+  - first:
+      74: 7400054
+    second: Cry
+  - first:
+      74: 7400056
+    second: Irritated
+  - first:
+      74: 7400058
+    second: Happy
+  - first:
+      74: 7400060
+    second: Saltbae
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Body
+  - first:
+      137: 13700002
+    second: Eye[]
+  - first:
+      137: 13700004
+    second: Face
+  - first:
+      137: 13700006
+    second: Katana 1
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -184,7 +532,7 @@ ModelImporter:
       name: Texture
     second: {fileID: 2100000, guid: 9f5c57342da0c974d95de54ce5916837, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -213,6 +561,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle
       takeName: Idle
+      internalID: 0
       firstFrame: 0
       lastFrame: 60
       wrapMode: 0
@@ -241,6 +590,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk
       takeName: Walk
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -251,9 +601,9 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 1
@@ -269,6 +619,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Run
       takeName: Run
+      internalID: 0
       firstFrame: 0
       lastFrame: 20
       wrapMode: 0
@@ -297,6 +648,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Crouch
       takeName: Crouch
+      internalID: 0
       firstFrame: 0
       lastFrame: 60
       wrapMode: 0
@@ -325,6 +677,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CrouchingWalk
       takeName: CrouchingWalk
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -353,6 +706,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Sword_Ready
       takeName: Sword_Ready
+      internalID: 0
       firstFrame: 0
       lastFrame: 60
       wrapMode: 0
@@ -381,6 +735,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Sword_Slash3
       takeName: Sword_Iai
+      internalID: 0
       firstFrame: 0
       lastFrame: 20
       wrapMode: 0
@@ -409,6 +764,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Sword_Slash
       takeName: Sword_Slash
+      internalID: 0
       firstFrame: 0
       lastFrame: 16
       wrapMode: 0
@@ -437,6 +793,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Sword_Slash2
       takeName: Sword_Slash2
+      internalID: 0
       firstFrame: 0
       lastFrame: 16
       wrapMode: 0
@@ -447,9 +804,9 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 1
@@ -465,6 +822,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Sword_JumpSlash
       takeName: Sword_JumpSlash
+      internalID: 0
       firstFrame: 0
       lastFrame: 16
       wrapMode: 0
@@ -493,6 +851,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Sword_Guard
       takeName: Sword_Guard
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -521,6 +880,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Sword_Parry
       takeName: Sword_Parry
+      internalID: 0
       firstFrame: 0
       lastFrame: 20
       wrapMode: 0
@@ -549,6 +909,7 @@ ModelImporter:
     - serializedVersion: 16
       name: ChainSaw_Idle
       takeName: ChainSaw_Idle
+      internalID: 0
       firstFrame: 0
       lastFrame: 50
       wrapMode: 0
@@ -577,6 +938,7 @@ ModelImporter:
     - serializedVersion: 16
       name: ChainSaw_Slash1
       takeName: ChainSaw_Slash
+      internalID: 0
       firstFrame: 0
       lastFrame: 22
       wrapMode: 0
@@ -605,6 +967,7 @@ ModelImporter:
     - serializedVersion: 16
       name: ChainSaw_Slash2
       takeName: ChainSaw_Slash2
+      internalID: 0
       firstFrame: 0
       lastFrame: 22
       wrapMode: 0
@@ -633,6 +996,7 @@ ModelImporter:
     - serializedVersion: 16
       name: NailGun_Idle
       takeName: NailGun_Idle
+      internalID: 0
       firstFrame: 0
       lastFrame: 45
       wrapMode: 0
@@ -661,6 +1025,7 @@ ModelImporter:
     - serializedVersion: 16
       name: NailGun_Aim
       takeName: NailGun_Aim
+      internalID: 0
       firstFrame: 0
       lastFrame: 45
       wrapMode: 0
@@ -689,6 +1054,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Throw
       takeName: Throw
+      internalID: 0
       firstFrame: 0
       lastFrame: 18
       wrapMode: 0
@@ -717,6 +1083,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Jump
       takeName: Jump
+      internalID: 0
       firstFrame: 0
       lastFrame: 12
       wrapMode: 0
@@ -752,6 +1119,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Jump_ascending
       takeName: Jump_ascending
+      internalID: 0
       firstFrame: 0
       lastFrame: 10
       wrapMode: 0
@@ -780,6 +1148,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Falling
       takeName: Falling
+      internalID: 0
       firstFrame: 0
       lastFrame: 10
       wrapMode: 0
@@ -808,6 +1177,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Grounded
       takeName: Grounded
+      internalID: 0
       firstFrame: 0
       lastFrame: 6
       wrapMode: 0
@@ -836,6 +1206,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Damaged
       takeName: Damaged
+      internalID: 0
       firstFrame: 0
       lastFrame: 8
       wrapMode: 0
@@ -864,6 +1235,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Down
       takeName: Down
+      internalID: 0
       firstFrame: 0
       lastFrame: 90
       wrapMode: 0
@@ -892,6 +1264,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Dizzy
       takeName: Dizzy
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -920,6 +1293,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Sleep
       takeName: Sleep
+      internalID: 0
       firstFrame: 0
       lastFrame: 60
       wrapMode: 0
@@ -948,6 +1322,7 @@ ModelImporter:
     - serializedVersion: 16
       name: WakeUp
       takeName: WakeUp
+      internalID: 0
       firstFrame: 0
       lastFrame: 20
       wrapMode: 0
@@ -976,6 +1351,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Cry
       takeName: Cry
+      internalID: 0
       firstFrame: 0
       lastFrame: 25
       wrapMode: 0
@@ -1004,6 +1380,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Irritated
       takeName: Irritated
+      internalID: 0
       firstFrame: 0
       lastFrame: 40
       wrapMode: 0
@@ -1032,6 +1409,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Happy
       takeName: Happy
+      internalID: 0
       firstFrame: 0
       lastFrame: 32
       wrapMode: 0
@@ -1060,6 +1438,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Saltbae
       takeName: Saltbae
+      internalID: 0
       firstFrame: 0
       lastFrame: 55
       wrapMode: 0
@@ -1092,6 +1471,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -1099,18 +1479,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -1119,10 +1500,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Hip
       humanName: Hips
@@ -1811,13 +2192,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

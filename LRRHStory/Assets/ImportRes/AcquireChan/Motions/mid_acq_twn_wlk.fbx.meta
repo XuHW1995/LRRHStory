@@ -1,76 +1,200 @@
 fileFormatVersion: 2
 guid: dd60f5fe9ba99d1458d7ae753454084e
-timeCreated: 1515120065
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: mn_c_head
-    100004: mn_c_main
-    100006: mn_c_neck
-    100008: mn_c_spine_01
-    100010: mn_c_spine_02
-    100012: mn_l_ankle
-    100014: mn_l_collar
-    100016: mn_l_elbow
-    100018: mn_l_hip
-    100020: mn_l_knee
-    100022: mn_l_shoulder
-    100024: mn_l_toe
-    100026: mn_l_wrist
-    100028: mn_r_ankle
-    100030: mn_r_collar
-    100032: mn_r_elbow
-    100034: mn_r_hip
-    100036: mn_r_knee
-    100038: mn_r_shoulder
-    100040: mn_r_toe
-    100042: mn_r_wrist
-    100044: move
-    100046: root
-    100048: sj_l_shoulder
-    100050: sj_l_wrist
-    100052: sj_r_shoulder
-    100054: sj_r_wrist
-    100056: wp_l_wrist
-    100058: wp_r_wrist
-    400000: //RootNode
-    400002: mn_c_head
-    400004: mn_c_main
-    400006: mn_c_neck
-    400008: mn_c_spine_01
-    400010: mn_c_spine_02
-    400012: mn_l_ankle
-    400014: mn_l_collar
-    400016: mn_l_elbow
-    400018: mn_l_hip
-    400020: mn_l_knee
-    400022: mn_l_shoulder
-    400024: mn_l_toe
-    400026: mn_l_wrist
-    400028: mn_r_ankle
-    400030: mn_r_collar
-    400032: mn_r_elbow
-    400034: mn_r_hip
-    400036: mn_r_knee
-    400038: mn_r_shoulder
-    400040: mn_r_toe
-    400042: mn_r_wrist
-    400044: move
-    400046: root
-    400048: sj_l_shoulder
-    400050: sj_l_wrist
-    400052: sj_r_shoulder
-    400054: sj_r_wrist
-    400056: wp_l_wrist
-    400058: wp_r_wrist
-    7400000: mid_acq_twn_wlk
-    9500000: //RootNode
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: mn_c_head
+  - first:
+      1: 100004
+    second: mn_c_main
+  - first:
+      1: 100006
+    second: mn_c_neck
+  - first:
+      1: 100008
+    second: mn_c_spine_01
+  - first:
+      1: 100010
+    second: mn_c_spine_02
+  - first:
+      1: 100012
+    second: mn_l_ankle
+  - first:
+      1: 100014
+    second: mn_l_collar
+  - first:
+      1: 100016
+    second: mn_l_elbow
+  - first:
+      1: 100018
+    second: mn_l_hip
+  - first:
+      1: 100020
+    second: mn_l_knee
+  - first:
+      1: 100022
+    second: mn_l_shoulder
+  - first:
+      1: 100024
+    second: mn_l_toe
+  - first:
+      1: 100026
+    second: mn_l_wrist
+  - first:
+      1: 100028
+    second: mn_r_ankle
+  - first:
+      1: 100030
+    second: mn_r_collar
+  - first:
+      1: 100032
+    second: mn_r_elbow
+  - first:
+      1: 100034
+    second: mn_r_hip
+  - first:
+      1: 100036
+    second: mn_r_knee
+  - first:
+      1: 100038
+    second: mn_r_shoulder
+  - first:
+      1: 100040
+    second: mn_r_toe
+  - first:
+      1: 100042
+    second: mn_r_wrist
+  - first:
+      1: 100044
+    second: move
+  - first:
+      1: 100046
+    second: root
+  - first:
+      1: 100048
+    second: sj_l_shoulder
+  - first:
+      1: 100050
+    second: sj_l_wrist
+  - first:
+      1: 100052
+    second: sj_r_shoulder
+  - first:
+      1: 100054
+    second: sj_r_wrist
+  - first:
+      1: 100056
+    second: wp_l_wrist
+  - first:
+      1: 100058
+    second: wp_r_wrist
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: mn_c_head
+  - first:
+      4: 400004
+    second: mn_c_main
+  - first:
+      4: 400006
+    second: mn_c_neck
+  - first:
+      4: 400008
+    second: mn_c_spine_01
+  - first:
+      4: 400010
+    second: mn_c_spine_02
+  - first:
+      4: 400012
+    second: mn_l_ankle
+  - first:
+      4: 400014
+    second: mn_l_collar
+  - first:
+      4: 400016
+    second: mn_l_elbow
+  - first:
+      4: 400018
+    second: mn_l_hip
+  - first:
+      4: 400020
+    second: mn_l_knee
+  - first:
+      4: 400022
+    second: mn_l_shoulder
+  - first:
+      4: 400024
+    second: mn_l_toe
+  - first:
+      4: 400026
+    second: mn_l_wrist
+  - first:
+      4: 400028
+    second: mn_r_ankle
+  - first:
+      4: 400030
+    second: mn_r_collar
+  - first:
+      4: 400032
+    second: mn_r_elbow
+  - first:
+      4: 400034
+    second: mn_r_hip
+  - first:
+      4: 400036
+    second: mn_r_knee
+  - first:
+      4: 400038
+    second: mn_r_shoulder
+  - first:
+      4: 400040
+    second: mn_r_toe
+  - first:
+      4: 400042
+    second: mn_r_wrist
+  - first:
+      4: 400044
+    second: move
+  - first:
+      4: 400046
+    second: root
+  - first:
+      4: 400048
+    second: sj_l_shoulder
+  - first:
+      4: 400050
+    second: sj_l_wrist
+  - first:
+      4: 400052
+    second: sj_r_shoulder
+  - first:
+      4: 400054
+    second: sj_r_wrist
+  - first:
+      4: 400056
+    second: wp_l_wrist
+  - first:
+      4: 400058
+    second: wp_r_wrist
+  - first:
+      74: 7400000
+    second: mid_acq_twn_wlk
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -83,16 +207,20 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: mid_acq_twn_wlk
       takeName: mid_acq_twn_wlk
+      internalID: 0
       firstFrame: 0
       lastFrame: 60
       wrapMode: 0
@@ -103,9 +231,9 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -184,13 +312,23 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -200,10 +338,14 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: mn_c_main
       humanName: Hips
@@ -581,15 +723,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 50a0208afad970f42b91e82ff62fab00,
     type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 2
   additionalBone: 0
   userData: 
   assetBundleName: 
