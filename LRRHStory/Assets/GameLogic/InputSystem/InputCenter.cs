@@ -59,7 +59,7 @@ public class InputCenter : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            EventSystem.SendEvent(EventId.KEY_A);
+            EventSystem.SendEvent(EventId.KEY_A);  
         }
 
         if (Input.GetKeyDown(KeyCode.D))
